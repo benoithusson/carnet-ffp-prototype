@@ -103,15 +103,47 @@ Automated workflow for building screens:
 
 ## 📱 Testing
 
+### **Local Testing**
+
 Run the app locally:
 ```bash
 cd app
 npm run start
 ```
 
-For mobile testing:
-- Use ngrok to expose local server
-- Install PWA on iPhone for testing
+The app will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+### **Mobile Testing with ngrok**
+
+To test the PWA on your iPhone (or any mobile device):
+
+1. **Install ngrok** (if not already installed):
+   ```bash
+   brew install ngrok
+   ```
+   Or download from [ngrok.com](https://ngrok.com)
+
+2. **Start your local server** (in terminal 1):
+   ```bash
+   cd app
+   npm run start
+   ```
+   Note the port number (usually `5173`)
+
+3. **Expose with ngrok** (in terminal 2):
+   ```bash
+   ngrok http 5173
+   ```
+   Replace `5173` with your actual port number
+
+4. **Access on mobile**:
+   - Copy the HTTPS forwarding URL from ngrok (e.g., `https://abc123.ngrok-free.app`)
+   - Open this URL on your iPhone
+   - To install as PWA: Tap the Share button → "Add to Home Screen"
+
+5. **Keep both terminals running** while testing
+
+**Note**: The free ngrok URL changes each time you restart ngrok. For a permanent URL, consider upgrading to a paid ngrok plan.
 
 ---
 
