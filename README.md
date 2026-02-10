@@ -112,15 +112,23 @@ Living documentation of all reusable components:
 
 ## 📱 Testing
 
-### **Local Testing**
+### **View Your App**
 
 Run the app locally:
 ```bash
-cd app
-npm run start
+npm run app
 ```
 
 The app will be available at `http://localhost:5173` (or the port shown in your terminal).
+
+### **View Design System**
+
+View the design system documentation:
+```bash
+npm run design
+```
+
+The design system will be available at `http://localhost:8080/design-system.html`
 
 ### **Mobile Testing with ngrok**
 
