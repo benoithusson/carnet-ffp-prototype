@@ -15,6 +15,11 @@ const LicenseNumberScreen = () => {
       {/* Header */}
       <header className="license-screen__header" data-node-id="2658:10144">
         <div className="license-screen__header-content">
+          <button className="license-screen__back-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="#191A1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
           <h1 className="license-screen__title">
             Connectez-vous à votre espace licencié
           </h1>

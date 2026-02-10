@@ -17,9 +17,15 @@ https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=835-2520&t=WI
 ### 04 - Numéro de licence FFP - DONE
 https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=835-3188&t=WICHs9uqBe3QEHu7-1
 
+### 05 - Les brevets et qualifications - DONE
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=835-3510&t=W46dcACFmqNtlG5e-1
+
+### 05b - Les brevets manquants (état vide) - DONE
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2282-3449&t=W46dcACFmqNtlG5e-1
+
 ---
 
 ## 📊 PROGRESS SUMMARY
-- Total screens: 3
-- Completed: 3
+- Total screens: 5
+- Completed: 5
 - Remaining: 0

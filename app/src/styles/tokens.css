@@ -59,6 +59,7 @@
 
   /* Semantic Colors */
   --bg-page: var(--color-gray-0);
+  --bg-secondary: #f9fafc;
   --bg-brand: var(--color-brand-500);
 
   --content-primary: var(--color-gray-900);

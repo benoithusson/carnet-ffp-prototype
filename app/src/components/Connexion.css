@@ -40,7 +40,7 @@
 .connexion-screen__header-content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xl);
+  gap: var(--space-m);
   width: 100%;
   max-width: 390px;
 }

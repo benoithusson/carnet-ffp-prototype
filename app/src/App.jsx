@@ -5,6 +5,7 @@ import TerminerInscription from './components/TerminerInscription';
 import HasLicenseQuestionScreen from './components/HasLicenseQuestionScreen';
 import LicenseNumberScreen from './components/LicenseNumberScreen';
 import TransferExperienceSummaryScreen from './components/TransferExperienceSummaryScreen';
+import BrevetsQualifications from './components/BrevetsQualifications';
 import './App.css';
 
 /**
@@ -28,6 +29,8 @@ function App() {
         return <LicenseNumberScreen />;
       case 'transfer-summary':
         return <TransferExperienceSummaryScreen />;
+      case 'brevets-qualifications':
+        return <BrevetsQualifications />;
       default:
         return (
           <div className="app__home">
@@ -80,6 +83,12 @@ function App() {
                     onClick={() => setCurrentScreen('transfer-summary')}
                   >
                     06 - Résumé transfert d'expérience
+                  </button>
+                  <button
+                    className="app__home-link"
+                    onClick={() => setCurrentScreen('brevets-qualifications')}
+                  >
+                    07 - Les brevets et qualifications
                   </button>
                 </div>
               </nav>

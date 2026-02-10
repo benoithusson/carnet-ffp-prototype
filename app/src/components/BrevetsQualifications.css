@@ -1,0 +1,330 @@
+/**
+ * Brevets et Qualifications Screen Styles
+ * BEM naming convention
+ *
+ * Block: brevets-screen
+ * Elements: header, progress, content, card, button, etc.
+ * Modifiers: progress step states (done, current, next)
+ */
+
+/* Main container */
+.brevets-screen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header section */
+.brevets-screen__header {
+  background-color: var(--bg-page);
+  border-bottom: var(--border-width-sm) solid var(--border-subtle);
+  box-shadow: 0px 3px 8px 0px rgba(26, 28, 29, 0.05);
+  padding: var(--space-11xl) var(--space-l) var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Header top bar with back, step and skip */
+.brevets-screen__header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.brevets-screen__back-button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.brevets-screen__back-button:hover {
+  opacity: 0.7;
+}
+
+.brevets-screen__step-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  margin: 0;
+}
+
+.brevets-screen__skip-button {
+  background: none;
+  border: none;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.brevets-screen__skip-button:hover {
+  opacity: 0.7;
+}
+
+/* Progress bar */
+.brevets-screen__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.brevets-screen__progress-step {
+  flex: 1;
+  height: 3px;
+  background-color: var(--color-gray-400);
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.brevets-screen__progress-step--done {
+  background-color: var(--color-success-500);
+}
+
+.brevets-screen__progress-step--current {
+  background-color: transparent;
+  border: var(--border-width-sm) solid var(--color-success-500);
+  padding: var(--space-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.brevets-screen__progress-step-inner {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-success-500);
+  border-radius: 8px;
+}
+
+.brevets-screen__progress-step--next {
+  background-color: var(--color-gray-400);
+}
+
+/* Header content */
+.brevets-screen__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.brevets-screen__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-32);
+  color: var(--content-primary);
+  margin: 0;
+}
+
+.brevets-screen__subtitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  margin: 0;
+}
+
+/* Content section */
+.brevets-screen__content {
+  flex: 1;
+  padding: var(--space-l);
+  padding-bottom: 128px; /* Space for fixed button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Empty state */
+.brevets-screen__empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: var(--space-4xl) var(--space-l);
+}
+
+.brevets-screen__empty-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  text-align: center;
+  margin: 0;
+  max-width: 358px;
+}
+
+.brevets-screen__card-container {
+  background-color: var(--bg-page);
+  border: var(--border-width-sm) solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-l);
+  box-shadow: 0px 4px 4px 0px rgba(26, 28, 29, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Certification card */
+.brevets-screen__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.brevets-screen__card-title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  margin: 0;
+}
+
+.brevets-screen__card-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.brevets-screen__card-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+}
+
+/* Divider between cards */
+.brevets-screen__divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-subtle);
+}
+
+/* Button container - fixed at bottom */
+.brevets-screen__button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-page);
+  border-top: var(--border-width-sm) solid var(--border-subtle);
+  box-shadow: 0px -3px 8px 0px rgba(26, 28, 29, 0.05);
+  padding: var(--space-2xl) var(--space-l) var(--space-4xl);
+  z-index: 10;
+}
+
+.brevets-screen__button-primary {
+  width: 100%;
+  min-height: 56px;
+  background-color: var(--bg-brand);
+  color: var(--content-inverse);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  border: none;
+  border-radius: var(--radius-3xl);
+  padding: var(--space-l);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+}
+
+.brevets-screen__button-primary:hover {
+  opacity: 0.9;
+}
+
+.brevets-screen__button-primary:active {
+  transform: scale(0.98);
+}
+
+/* Button group - for dual buttons layout */
+.brevets-screen__button-group {
+  display: flex;
+  gap: var(--space-s);
+  width: 100%;
+}
+
+/* Secondary button - outlined style */
+.brevets-screen__button-secondary {
+  flex: 1;
+  min-height: 56px;
+  background-color: transparent;
+  color: var(--content-primary);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  border: var(--border-width-md) solid var(--content-primary);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-l);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+}
+
+.brevets-screen__button-secondary:hover {
+  opacity: 0.8;
+}
+
+.brevets-screen__button-secondary:active {
+  transform: scale(0.98);
+}
+
+/* When in button group, primary button also takes flex */
+.brevets-screen__button-group .brevets-screen__button-primary {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .brevets-screen__content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .brevets-screen__button-container {
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
