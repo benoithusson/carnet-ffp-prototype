@@ -51,6 +51,7 @@ carnet-ffp/
    - ✅ Builds React component with BEM CSS
    - ✅ Adds component to app folder
    - ✅ Updates main menu with navigation link
+   - ✅ Updates design system with new reusable components
    - ✅ Marks screen as DONE in `docs/figma-links.md`
 
 ### **To Delete a Screen:**
@@ -85,9 +86,17 @@ UI/UX behavior specifications:
 
 ### **.claude/commands/execute-prp.md**
 Automated workflow for building screens:
-- 8-step process from context loading to validation
+- 9-step process from context loading to validation
 - Ensures consistency across all screens
 - Automatic progress tracking
+- Updates design system documentation
+
+### **design-system.html**
+Living documentation of all reusable components:
+- Visual examples of each component
+- Code snippets (HTML/JSX)
+- BEM CSS classes reference
+- Automatically updated when new components are created
 
 ---
 

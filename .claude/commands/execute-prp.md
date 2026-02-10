@@ -55,12 +55,21 @@ Figma Link: $ARGUMENTS
 **Action**: Add a link to the new screen in the main menu page
 - Ensure navigation is working
 
-### 7. MARK AS COMPLETE
+### 7. UPDATE DESIGN SYSTEM
+**Action**: Add new components to the design system documentation
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/design-system.html`
+- Add each new reusable component created in this screen
+- Include component name, description, and a visual example
+- Show the HTML/JSX code snippet
+- Display the component's BEM CSS classes
+- Only add truly reusable components (buttons, inputs, cards, etc.), not full page layouts
+
+### 8. MARK AS COMPLETE
 **Action**: Update progress tracking
 - Add "- DONE" after the Figma link in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/docs/figma-links.md`
 - Example: `# 04 - Numéro de licence FFP - DONE`
 
-### 8. VALIDATION CHECKLIST
+### 9. VALIDATION CHECKLIST
 **Action**: Display completion summary
 - Generate a checklist with: `[✅] Task name and outcome`
 - Include title: **Action Summary**
@@ -73,6 +82,7 @@ Figma Link: $ARGUMENTS
 - Comments explaining BEM structure and dummy data usage
 - Component added to existing project (not a new project)
 - Main menu updated with link to new screen
+- Design system updated with new reusable components
 
 ---
 
