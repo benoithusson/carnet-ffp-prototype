@@ -8,19 +8,22 @@ A Progressive Web App (PWA) prototype for a skydiving jump log that allows skydi
 ## 🗂️ Project Structure
 
 ```
-carnet-ffp-2/
+carnet-ffp/
 ├── .claude/
 │   └── commands/
 │       ├── execute-prp.md      # Main command to build screens
 │       └── delete-prp.md       # Command to delete screens
-├── design/
+├── guidelines/
 │   └── guidelines-components.md # UI/UX interaction guidelines
-├── PWA/                         # Main application folder
+├── docs/
+│   ├── figma-links.md          # Figma designs progress tracker
+│   ├── my-guidelines.md        # Additional guidelines
+│   └── archives/               # Archived files
+├── app/                         # Main application folder
 │   └── src/
 │       └── styles/
 │           └── main.css        # Global styles
 ├── context.md                   # Project context & technical requirements
-├── figma-links.md              # Figma designs progress tracker
 └── README.md                    # This file
 ```
 
@@ -42,13 +45,13 @@ carnet-ffp-2/
 
 2. **What happens automatically:**
    - ✅ Loads project context from `context.md`
-   - ✅ Reads design guidelines from `design/guidelines-components.md`
+   - ✅ Reads design guidelines from `guidelines/guidelines-components.md`
    - ✅ Extracts Figma design
    - ✅ Checks existing CSS styles
    - ✅ Builds React component with BEM CSS
-   - ✅ Adds component to PWA folder
+   - ✅ Adds component to app folder
    - ✅ Updates main menu with navigation link
-   - ✅ Marks screen as DONE in `figma-links.md`
+   - ✅ Marks screen as DONE in `docs/figma-links.md`
 
 ### **To Delete a Screen:**
 
@@ -67,13 +70,13 @@ Contains all project requirements:
 - Project structure rules
 - Development constraints
 
-### **figma-links.md**
+### **docs/figma-links.md**
 Progress tracker for all Figma designs:
 - List of all screens to implement
 - Mark screens as DONE when completed
 - Track overall progress
 
-### **design/guidelines-components.md**
+### **guidelines/guidelines-components.md**
 UI/UX behavior specifications:
 - Input field behaviors
 - Header interactions
@@ -102,7 +105,7 @@ Automated workflow for building screens:
 
 Run the app locally:
 ```bash
-cd PWA
+cd app
 npm run start
 ```
 
@@ -136,9 +139,9 @@ For mobile testing:
 
 All markdown files are linked with **absolute paths** to ensure commands work correctly from any directory:
 
-- `context.md` → Links to `figma-links.md`, `design/guidelines-components.md`, `PWA/src/styles/main.css`
+- `context.md` → Links to `docs/figma-links.md`, `guidelines/guidelines-components.md`, `app/src/styles/main.css`
 - `execute-prp.md` → Links to all project files
-- `delete-prp.md` → Links to PWA folder and `figma-links.md`
+- `delete-prp.md` → Links to app folder and `docs/figma-links.md`
 
 This ensures automation works seamlessly when you run commands.
 
@@ -146,7 +149,7 @@ This ensures automation works seamlessly when you run commands.
 
 ## 📊 Progress Tracking
 
-Check `figma-links.md` for:
+Check `docs/figma-links.md` for:
 - Total number of screens
 - Completed screens (marked with `- DONE`)
 - Remaining screens to implement
@@ -156,7 +159,7 @@ Check `figma-links.md` for:
 ## 🤝 Contributing
 
 When adding new screens:
-1. Add Figma link to `figma-links.md`
+1. Add Figma link to `docs/figma-links.md`
 2. Run `/execute-prp` command
 3. Verify component works in browser
 4. Check that main menu link is added

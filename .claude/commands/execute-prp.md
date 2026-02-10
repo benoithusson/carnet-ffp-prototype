@@ -13,19 +13,19 @@ Figma Link: $ARGUMENTS
 
 ### 1. LOAD PROJECT CONTEXT
 **Action**: Read and integrate all project conventions and constraints
-- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/context.md`
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/context.md`
 - **Purpose**: Understand your role, tech stack, project structure, and constraints
 
 ### 2. LOAD DESIGN GUIDELINES
 **Action**: Read component behavior and interaction guidelines
-- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/design/guidelines-components.md`
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/guidelines/guidelines-components.md`
 - **Purpose**: Understand input behaviors, header rules, CTA positioning, etc.
 
 ### 3. PROCESS FIGMA LINK
 **Action**: Handle the Figma link provided in arguments
 
 **If a new Figma link is provided**:
-- Add it to `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md` following the existing format:
+- Add it to `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/docs/figma-links.md` following the existing format:
   ```markdown
   ### [Screen Number] - [Screen Name]
   [Figma URL]
@@ -34,19 +34,19 @@ Figma Link: $ARGUMENTS
 - Assign the next sequential number
 
 **If no link in arguments**:
-- Read from `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md` and pick the first non-DONE item
+- Read from `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/docs/figma-links.md` and pick the first non-DONE item
 
 **Important**: Only implement the screen content, not the gray wrapper or post-it notes around it
 
 ### 4. CHECK EXISTING STYLES
 **Action**: Review existing CSS to reuse classes and maintain consistency
-- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/PWA/src/styles/main.css`
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/app/src/styles/main.css`
 
 ### 5. BUILD THE COMPONENT
 **Action**: Generate React component with BEM CSS
 - Use ReactJS (no Vite, no Tailwind)
 - Follow BEM naming convention strictly
-- Add the component to existing PWA folder structure
+- Add the component to existing app folder structure
 - Reuse existing components when possible
 - Include dummy data
 - Add smooth animations where appropriate
@@ -57,7 +57,7 @@ Figma Link: $ARGUMENTS
 
 ### 7. MARK AS COMPLETE
 **Action**: Update progress tracking
-- Add "- DONE" after the Figma link in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md`
+- Add "- DONE" after the Figma link in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/docs/figma-links.md`
 - Example: `# 04 - Numéro de licence FFP - DONE`
 
 ### 8. VALIDATION CHECKLIST

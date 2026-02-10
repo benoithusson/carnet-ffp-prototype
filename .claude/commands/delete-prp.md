@@ -13,7 +13,7 @@ Screen Name: $ARGUMENTS
 
 ### 1. IDENTIFY THE SCREEN
 **Action**: Locate the screen component and related files
-- Search in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/PWA` for the component
+- Search in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/app` for the component
 - Identify all related files (JSX, CSS, etc.)
 
 ### 2. DELETE COMPONENT FILES
@@ -28,7 +28,7 @@ Screen Name: $ARGUMENTS
 
 ### 4. UPDATE FIGMA LINKS TRACKER
 **Action**: Update progress tracking
-- Remove "- DONE" marker from the screen entry in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md`
+- Remove "- DONE" marker from the screen entry in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/docs/figma-links.md`
 - Or remove the entire entry if requested
 
 ### 5. VALIDATION CHECKLIST
