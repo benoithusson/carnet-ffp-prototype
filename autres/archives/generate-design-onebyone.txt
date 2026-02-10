@@ -1,0 +1,27 @@
+# CODE BLUEPRINT GENERATION FROM FIGMA LINK
+
+## 1 - CONTEXT INJECTION
+- Prioritize and strictly integrate all conventions and constraints defined in the file [./context.md] before processing the specific feature.
+
+## 2 - PRIMARY OBJECTIVE 
+- Generate the design based solely on the Figma link provided using the stack and constraints I provided. The output must focus on implementation details, BEM conventions, and visual fidelity.
+
+## 3 - TARGET RESOURCE
+- The design link to be implemented is injected here: $ARGUMENTS
+
+## 4 - OUTPUT REQUIREMENTS & CONSTRAINTS
+- Generate the React component code (JSX) and its associated Vanilla CSS (in a separate style block or file block) that strictly adheres to the BEM convention. The code must include comments detailing the BEM structure.
+- Each new screen created should been added within the PWA folder.
+- You don't need to create new project each time for new design. You need to add the screen within the project because all screens are related.
+
+## 5 - VALIDATION LOOP (Fidelity & Compliance)
+[ ] The BEM naming convention is strictly respected in the JSX and CSS, as defined in project_context.md.
+[ ] Dummy data structure is provided and used for rendering the component.
+[ ] The blueprint is written in the style of a Junior Frontend Developer.
+[ ] The component provides a direct and faithful implementation of the design element defined by the Figma link.
+
+## 6 - OTHER TASKS
+- Each time I give you a figma link, add this figma link within the file [./list-figma-links.md].
+- The figma link should be under the title "Figma Link".
+- Once you're done with a design, add the status Done under "Status".
+- Between each new link, I want enough spacing to improve readibility

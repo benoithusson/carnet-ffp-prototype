@@ -1,0 +1,344 @@
+/**
+ * LogbookPhotoScreen Styles
+ *
+ * BEM Structure:
+ * Block: logbook-photo
+ * Elements: __header, __header-top, __back-button, __title, __subtitle,
+ *           __content, __upload-section, __upload-label, __upload-input,
+ *           __upload-icon, __upload-text, __image-list, __image-item,
+ *           __image-thumbnail, __delete-button, __delete-icon, __delete-text,
+ *           __button-container, __button
+ * Modifiers: --disabled
+ *
+ * Design Tokens Used:
+ * - Colors: gray-0 (#ffffff), gray-900 (#1a1c1d), gray-800 (#51565b),
+ *           gray-200 (#edeff1), blue-500 (#155294)
+ * - Spacing: 4px, 8px, 16px, 24px, 60px
+ * - Border Radius: 8px, 48px
+ * - Font: Inter
+ */
+
+/* Block: Main container */
+.logbook-photo {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff; /* gray-0 */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 48px;
+}
+
+/* Element: Header section */
+.logbook-photo__header {
+  background-color: #ffffff; /* gray-0 */
+  padding: 24px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Element: Header top section with back button and title */
+.logbook-photo__header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 32px;
+  position: relative;
+}
+
+/* Element: Back button */
+.logbook-photo__back-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #1a1c1d; /* gray-900 */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease;
+}
+
+.logbook-photo__back-button:hover {
+  opacity: 0.7;
+}
+
+.logbook-photo__back-button:active {
+  opacity: 0.5;
+}
+
+/* Element: Title */
+.logbook-photo__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1a1c1d; /* gray-900 */
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+/* Element: Subtitle */
+.logbook-photo__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #51565b; /* gray-800 */
+  text-align: center;
+  margin: 0;
+}
+
+/* Element: Content section */
+.logbook-photo__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  gap: 32px;
+  margin-top: 26px;
+  overflow-y: auto;
+}
+
+/* Element: Upload section */
+.logbook-photo__upload-section {
+  width: 100%;
+  max-width: 358px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Element: Upload label */
+.logbook-photo__upload-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d; /* gray-900 */
+}
+
+/* Element: Upload input area (styled as clickable box) */
+.logbook-photo__upload-input {
+  width: 100%;
+  padding: 32px;
+  border: 2px dashed #1a1c1d; /* gray-900 */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ffffff; /* gray-0 */
+}
+
+.logbook-photo__upload-input:hover {
+  background-color: #fafafa; /* gray-100 */
+  border-color: #155294; /* blue-500 */
+}
+
+.logbook-photo__upload-input:active {
+  background-color: #edeff1; /* gray-200 */
+}
+
+/* Element: Upload icon */
+.logbook-photo__upload-icon {
+  width: 24px;
+  height: 24px;
+  color: #1a1c1d; /* gray-900 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Element: Upload text */
+.logbook-photo__upload-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a1c1d; /* gray-900 */
+  text-align: center;
+  margin: 0;
+}
+
+/* Element: Image list container */
+.logbook-photo__image-list {
+  width: 100%;
+  max-width: 358px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Element: Single image item */
+.logbook-photo__image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+/* Element: Image thumbnail container */
+.logbook-photo__image-thumbnail {
+  width: 118px;
+  height: 118px;
+  border: 1px solid #edeff1; /* gray-200 */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logbook-photo__image-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Element: Delete button */
+.logbook-photo__delete-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 44px;
+  width: 142px;
+  justify-content: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.logbook-photo__delete-button:hover {
+  opacity: 0.7;
+}
+
+.logbook-photo__delete-button:active {
+  opacity: 0.5;
+}
+
+/* Element: Delete icon container */
+.logbook-photo__delete-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1c1d; /* gray-900 */
+}
+
+/* Element: Delete text */
+.logbook-photo__delete-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d; /* gray-900 */
+}
+
+/* Element: Button container */
+.logbook-photo__button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* gray-0 */
+  padding: 24px 16px;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+}
+
+/* Element: Validate button */
+.logbook-photo__button {
+  width: 100%;
+  max-width: 358px;
+  margin: 0 auto;
+  display: block;
+  height: 56px;
+  min-height: 56px;
+  background-color: #155294; /* blue-500 */
+  color: #ffffff; /* gray-0 */
+  border: none;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logbook-photo__button:hover {
+  background-color: #1a65b5;
+}
+
+.logbook-photo__button:active {
+  background-color: #104078;
+  transform: scale(0.98);
+}
+
+/* Modifier: Disabled button */
+.logbook-photo__button--disabled {
+  background-color: #c1c7cd;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.logbook-photo__button--disabled:hover {
+  background-color: #c1c7cd;
+  transform: none;
+}
+
+.logbook-photo__button--disabled:active {
+  background-color: #c1c7cd;
+  transform: none;
+}
+
+/* Scrollbar styling for image list */
+.logbook-photo__image-list::-webkit-scrollbar {
+  height: 4px;
+}
+
+.logbook-photo__image-list::-webkit-scrollbar-track {
+  background: #edeff1; /* gray-200 */
+  border-radius: 2px;
+}
+
+.logbook-photo__image-list::-webkit-scrollbar-thumb {
+  background: #b0b5bb; /* gray-500 */
+  border-radius: 2px;
+}
+
+.logbook-photo__image-list::-webkit-scrollbar-thumb:hover {
+  background: #9aa0a6; /* gray-600 */
+}

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System - FFP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family-bevietnam-pro);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: var(--space-8xl);
+    }
+
+    .header {
+      margin-bottom: var(--space-12xl);
+      padding-bottom: var(--space-6xl);
+      border-bottom: var(--border-width-sm) solid var(--border-subtle);
+    }
+
+    .header h1 {
+      font-size: var(--text-h1-size);
+      line-height: var(--text-h1-line-height);
+      font-weight: var(--text-h1-weight);
+      color: var(--color-brand-500);
+      margin-bottom: var(--space-m);
+    }
+
+    .header p {
+      font-size: var(--text-body-lg-size);
+      color: var(--text-secondary);
+    }
+
+    .section {
+      margin-bottom: var(--space-16xl);
+    }
+
+    .section-title {
+      font-size: var(--text-h2-size);
+      line-height: var(--text-h2-line-height);
+      font-weight: var(--text-h2-weight);
+      margin-bottom: var(--space-6xl);
+      color: var(--text-primary);
+    }
+
+    .subsection-title {
+      font-size: var(--text-h4-size);
+      line-height: var(--text-h4-line-height);
+      font-weight: var(--text-h4-weight);
+      margin-top: var(--space-8xl);
+      margin-bottom: var(--space-4xl);
+      color: var(--text-primary);
+    }
+
+    /* Color Swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-xl);
+      margin-bottom: var(--space-8xl);
+    }
+
+    .color-swatch {
+      background: var(--bg-surface);
+      border: var(--border-width-sm) solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .color-swatch:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .color-preview {
+      height: 120px;
+      width: 100%;
+    }
+
+    .color-info {
+      padding: var(--space-l);
+    }
+
+    .color-name {
+      font-size: var(--text-body-md-size);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-xs);
+      color: var(--text-primary);
+    }
+
+    .color-value {
+      font-size: var(--text-body-sm-size);
+      color: var(--text-secondary);
+      font-family: monospace;
+    }
+
+    .color-token {
+      font-size: var(--text-caption-size);
+      color: var(--text-tertiary);
+      margin-top: var(--space-xs);
+      font-family: monospace;
+    }
+
+    /* Typography Samples */
+    .typography-sample {
+      background: var(--bg-surface);
+      border: var(--border-width-sm) solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6xl);
+      margin-bottom: var(--space-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .typography-label {
+      font-size: var(--text-body-sm-size);
+      color: var(--text-tertiary);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-s);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .typography-tokens {
+      font-size: var(--text-caption-size);
+      color: var(--text-tertiary);
+      margin-top: var(--space-m);
+      font-family: monospace;
+    }
+
+    /* Spacing Scale */
+    .spacing-grid {
+      display: grid;
+      gap: var(--space-xl);
+    }
+
+    .spacing-item {
+      background: var(--bg-surface);
+      border: var(--border-width-sm) solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: var(--space-l);
+      display: flex;
+      align-items: center;
+      gap: var(--space-l);
+    }
+
+    .spacing-visual {
+      background: var(--color-brand-500);
+      height: 40px;
+      border-radius: var(--radius-sm);
+    }
+
+    .spacing-info {
+      flex: 1;
+    }
+
+    .spacing-name {
+      font-weight: var(--font-weight-semibold);
+      color: var(--text-primary);
+    }
+
+    .spacing-value {
+      font-size: var(--text-body-sm-size);
+      color: var(--text-secondary);
+      font-family: monospace;
+    }
+
+    /* Shadows */
+    .shadow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: var(--space-6xl);
+    }
+
+    .shadow-sample {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6xl);
+      text-align: center;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .shadow-name {
+      font-weight: var(--font-weight-semibold);
+      margin-top: var(--space-l);
+      color: var(--text-primary);
+    }
+
+    .shadow-token {
+      font-size: var(--text-caption-size);
+      color: var(--text-tertiary);
+      margin-top: var(--space-xs);
+      font-family: monospace;
+    }
+
+    /* Border Radius */
+    .radius-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-4xl);
+    }
+
+    .radius-sample {
+      background: var(--color-brand-500);
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-inverse);
+    }
+
+    .radius-name {
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-xs);
+    }
+
+    .radius-value {
+      font-size: var(--text-body-sm-size);
+      opacity: 0.9;
+    }
+
+    /* Status Colors */
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-xl);
+    }
+
+    .status-card {
+      background: var(--bg-surface);
+      border: var(--border-width-sm) solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: var(--space-s) var(--space-l);
+      border-radius: var(--radius-full);
+      font-size: var(--text-body-sm-size);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-l);
+    }
+
+    .status-success .status-badge {
+      background: var(--bg-success-subtle);
+      color: var(--text-success);
+    }
+
+    .status-warning .status-badge {
+      background: var(--bg-warning-subtle);
+      color: var(--text-warning);
+    }
+
+    .status-error .status-badge {
+      background: var(--bg-error-subtle);
+      color: var(--text-error);
+    }
+
+    .status-info .status-badge {
+      background: var(--bg-info-subtle);
+      color: var(--text-info);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Design System</h1>
+      <p>Système de design complet basé sur les tokens Figma</p>
+    </header>
+
+    <!-- Colors Section -->
+    <section class="section">
+      <h2 class="section-title">Couleurs</h2>
+
+      <h3 class="subsection-title">Brand Colors</h3>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-50);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 50</div>
+            <div class="color-value">#f5f9fe</div>
+            <div class="color-token">--color-brand-50</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-100);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 100</div>
+            <div class="color-value">#e6ecf3</div>
+            <div class="color-token">--color-brand-100</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-200);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 200</div>
+            <div class="color-value">#b2c6db</div>
+            <div class="color-token">--color-brand-200</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-300);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 300</div>
+            <div class="color-value">#7397bf</div>
+            <div class="color-token">--color-brand-300</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-400);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 400</div>
+            <div class="color-value">#4475a9</div>
+            <div class="color-token">--color-brand-400</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-500);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 500</div>
+            <div class="color-value">#155294</div>
+            <div class="color-token">--color-brand-500</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-600);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 600</div>
+            <div class="color-value">#114276</div>
+            <div class="color-token">--color-brand-600</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-700);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 700</div>
+            <div class="color-value">#0d3159</div>
+            <div class="color-token">--color-brand-700</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-800);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 800</div>
+            <div class="color-value">#08213b</div>
+            <div class="color-token">--color-brand-800</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-brand-900);"></div>
+          <div class="color-info">
+            <div class="color-name">Brand 900</div>
+            <div class="color-value">#030d19</div>
+            <div class="color-token">--color-brand-900</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Gray Scale</h3>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-0); border: 1px solid var(--border-subtle);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 0</div>
+            <div class="color-value">#ffffff</div>
+            <div class="color-token">--color-gray-0</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-100);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 100</div>
+            <div class="color-value">#f6f6f6</div>
+            <div class="color-token">--color-gray-100</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-200);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 200</div>
+            <div class="color-value">#eaecee</div>
+            <div class="color-token">--color-gray-200</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-300);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 300</div>
+            <div class="color-value">#dce2e9</div>
+            <div class="color-token">--color-gray-300</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-400);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 400</div>
+            <div class="color-value">#ccd2d9</div>
+            <div class="color-token">--color-gray-400</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-500);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 500</div>
+            <div class="color-value">#b0b5bb</div>
+            <div class="color-token">--color-gray-500</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-600);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 600</div>
+            <div class="color-value">#828990</div>
+            <div class="color-token">--color-gray-600</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-700);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 700</div>
+            <div class="color-value">#5d6166</div>
+            <div class="color-token">--color-gray-700</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-800);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 800</div>
+            <div class="color-value">#4d5156</div>
+            <div class="color-token">--color-gray-800</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-preview" style="background: var(--color-gray-900);"></div>
+          <div class="color-info">
+            <div class="color-name">Gray 900</div>
+            <div class="color-value">#191a1b</div>
+            <div class="color-token">--color-gray-900</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Status Colors</h3>
+      <div class="status-grid">
+        <div class="status-card status-success">
+          <span class="status-badge">Success</span>
+          <div class="color-token">--color-success</div>
+          <div class="color-token">--bg-success-subtle</div>
+          <div class="color-token">--text-success</div>
+        </div>
+        <div class="status-card status-warning">
+          <span class="status-badge">Warning</span>
+          <div class="color-token">--color-warning</div>
+          <div class="color-token">--bg-warning-subtle</div>
+          <div class="color-token">--text-warning</div>
+        </div>
+        <div class="status-card status-error">
+          <span class="status-badge">Error</span>
+          <div class="color-token">--color-error</div>
+          <div class="color-token">--bg-error-subtle</div>
+          <div class="color-token">--text-error</div>
+        </div>
+        <div class="status-card status-info">
+          <span class="status-badge">Info</span>
+          <div class="color-token">--color-info</div>
+          <div class="color-token">--bg-info-subtle</div>
+          <div class="color-token">--text-info</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section class="section">
+      <h2 class="section-title">Typographie</h2>
+
+      <div class="typography-sample">
+        <div class="typography-label">Heading 1</div>
+        <h1 style="font-size: var(--text-h1-size); line-height: var(--text-h1-line-height); font-weight: var(--text-h1-weight);">
+          The quick brown fox jumps
+        </h1>
+        <div class="typography-tokens">
+          font-size: 60px | line-height: 84px | weight: 700
+        </div>
+      </div>
+
+      <div class="typography-sample">
+        <div class="typography-label">Heading 2</div>
+        <h2 style="font-size: var(--text-h2-size); line-height: var(--text-h2-line-height); font-weight: var(--text-h2-weight);">
+          The quick brown fox jumps over the lazy dog
+        </h2>
+        <div class="typography-tokens">
+          font-size: 48px | line-height: 64px | weight: 700
+        </div>
+      </div>
+
+      <div class="typography-sample">
+        <div class="typography-label">Heading 3</div>
+        <h3 style="font-size: var(--text-h3-size); line-height: var(--text-h3-line-height); font-weight: var(--text-h3-weight);">
+          The quick brown fox jumps over the lazy dog
+        </h3>
+        <div class="typography-tokens">
+          font-size: 40px | line-height: 56px | weight: 700
+        </div>
+      </div>
+
+      <div class="typography-sample">
+        <div class="typography-label">Heading 4</div>
+        <h4 style="font-size: var(--text-h4-size); line-height: var(--text-h4-line-height); font-weight: var(--text-h4-weight);">
+          The quick brown fox jumps over the lazy dog
+        </h4>
+        <div class="typography-tokens">
+          font-size: 32px | line-height: 44px | weight: 700
+        </div>
+      </div>
+
+      <div class="typography-sample">
+        <div class="typography-label">Body Large</div>
+        <p style="font-size: var(--text-body-lg-size); line-height: var(--text-body-lg-line-height); font-weight: var(--text-body-lg-weight);">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="typography-tokens">
+          font-size: 20px | line-height: 32px | weight: 400
+        </div>
+      </div>
+
+      <div class="typography-sample">
+        <div class="typography-label">Body Medium (Default)</div>
+        <p style="font-size: var(--text-body-md-size); line-height: var(--text-body-md-line-height); font-weight: var(--text-body-md-weight);">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+        <div class="typography-tokens">
+          font-size: 16px | line-height: 24px | weight: 400
+        </div>
+      </div>
+
+      <div class="typography-sample">
+        <div class="typography-label">Body Small</div>
+        <p style="font-size: var(--text-body-sm-size); line-height: var(--text-body-sm-line-height); font-weight: var(--text-body-sm-weight);">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+        <div class="typography-tokens">
+          font-size: 14px | line-height: 24px | weight: 400
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing Section -->
+    <section class="section">
+      <h2 class="section-title">Espacements</h2>
+
+      <div class="spacing-grid">
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-xs);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">XS</div>
+            <div class="spacing-value">4px · --space-xs</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-s);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">S</div>
+            <div class="spacing-value">8px · --space-s</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-m);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">M</div>
+            <div class="spacing-value">12px · --space-m</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-l);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">L</div>
+            <div class="spacing-value">16px · --space-l</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-xl);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">XL</div>
+            <div class="spacing-value">20px · --space-xl</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-2xl);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">2XL</div>
+            <div class="spacing-value">24px · --space-2xl</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-4xl);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">4XL</div>
+            <div class="spacing-value">32px · --space-4xl</div>
+          </div>
+        </div>
+        <div class="spacing-item">
+          <div class="spacing-visual" style="width: var(--space-8xl);"></div>
+          <div class="spacing-info">
+            <div class="spacing-name">8XL</div>
+            <div class="spacing-value">48px · --space-8xl</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shadows Section -->
+    <section class="section">
+      <h2 class="section-title">Ombres</h2>
+
+      <div class="shadow-grid">
+        <div class="shadow-sample" style="box-shadow: var(--shadow-sm);">
+          <div class="shadow-name">Small</div>
+          <div class="shadow-token">--shadow-sm</div>
+        </div>
+        <div class="shadow-sample" style="box-shadow: var(--shadow-md);">
+          <div class="shadow-name">Medium</div>
+          <div class="shadow-token">--shadow-md</div>
+        </div>
+        <div class="shadow-sample" style="box-shadow: var(--shadow-lg);">
+          <div class="shadow-name">Large</div>
+          <div class="shadow-token">--shadow-lg</div>
+        </div>
+        <div class="shadow-sample" style="box-shadow: var(--shadow-xl);">
+          <div class="shadow-name">Extra Large</div>
+          <div class="shadow-token">--shadow-xl</div>
+        </div>
+        <div class="shadow-sample" style="box-shadow: var(--shadow-card);">
+          <div class="shadow-name">Card</div>
+          <div class="shadow-token">--shadow-card</div>
+        </div>
+        <div class="shadow-sample" style="box-shadow: var(--shadow-toast);">
+          <div class="shadow-name">Toast</div>
+          <div class="shadow-token">--shadow-toast</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Border Radius Section -->
+    <section class="section">
+      <h2 class="section-title">Border Radius</h2>
+
+      <div class="radius-grid">
+        <div class="radius-sample" style="border-radius: var(--radius-sm);">
+          <div class="radius-name">Small</div>
+          <div class="radius-value">4px</div>
+        </div>
+        <div class="radius-sample" style="border-radius: var(--radius-md);">
+          <div class="radius-name">Medium</div>
+          <div class="radius-value">8px</div>
+        </div>
+        <div class="radius-sample" style="border-radius: var(--radius-lg);">
+          <div class="radius-name">Large</div>
+          <div class="radius-value">16px</div>
+        </div>
+        <div class="radius-sample" style="border-radius: var(--radius-xl);">
+          <div class="radius-name">XL</div>
+          <div class="radius-value">24px</div>
+        </div>
+        <div class="radius-sample" style="border-radius: var(--radius-2xl);">
+          <div class="radius-name">2XL</div>
+          <div class="radius-value">32px</div>
+        </div>
+        <div class="radius-sample" style="border-radius: var(--radius-full); width: 120px; height: 120px;">
+          <div class="radius-name">Full</div>
+          <div class="radius-value">9999px</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

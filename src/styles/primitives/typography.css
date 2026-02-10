@@ -1,0 +1,77 @@
+/**
+ * Primitive Typography
+ * Font families, sizes, weights, and line heights
+ */
+
+:root {
+  /* Font Families */
+  --font-family-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-oswald: "Oswald", sans-serif;
+  --font-family-archivo-black: "Archivo Black", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-rajdhani: "Rajdhani", sans-serif;
+  --font-family-switzer: "Switzer", sans-serif;
+  --font-family-rethink-sans: "Rethink Sans", sans-serif;
+  --font-family-schibsted-grotesk: "Schibsted Grotesk", sans-serif;
+  --font-family-bevietnam-pro: "Be Vietnam Pro", sans-serif;
+  --font-family-geist: "Geist", sans-serif;
+  --font-family-instrument-sans: "Instrument Sans", sans-serif;
+
+  /* Primary Font Family */
+  --font-family-primary: var(--font-family-bevietnam-pro);
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 36px;
+  --font-size-6xl: 40px;
+  --font-size-7xl: 44px;
+  --font-size-8xl: 48px;
+  --font-size-9xl: 52px;
+  --font-size-10xl: 56px;
+  --font-size-11xl: 60px;
+  --font-size-12xl: 64px;
+
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Specific Line Heights */
+  --line-height-10: 10px;
+  --line-height-12: 12px;
+  --line-height-14: 14px;
+  --line-height-16: 16px;
+  --line-height-18: 18px;
+  --line-height-20: 20px;
+  --line-height-24: 24px;
+  --line-height-28: 28px;
+  --line-height-32: 32px;
+  --line-height-36: 36px;
+  --line-height-40: 40px;
+  --line-height-44: 44px;
+  --line-height-48: 48px;
+  --line-height-56: 56px;
+  --line-height-64: 64px;
+  --line-height-84: 84px;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+}

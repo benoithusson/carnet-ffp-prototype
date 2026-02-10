@@ -1,0 +1,35 @@
+# INSTRUCTIONS FOR DESIGN EXECUTION
+
+## 1. FIRST TASK: DISPLAY THE LIST OF TASKS 
+- So that I can be sure you follow the right instructions in the right order, I want you to display the following list of instructions before you start :
+    1. Display in the terminal the link I give you.
+    2. Get the file [./context.md], read the information contain in the file and display a confirmation once you did.
+    3. Generate the design from the Figma Link.
+    4. Add the figma link in the file [./figma-links.md] following the right instructions.
+
+## 2. GET THE CONTEXT
+- Read all information contain in the file [./context.md].
+- Display a confirmation in the terminal once you read the file.
+- Prioritize and strictly integrate all conventions and constraints within the file to make the design.
+
+## 3. DESIGN GENERATION
+- Using the Figma link I gave you in the terminal and generate the design following the instructions I gave you in the file [./context.md].
+- The output must prioritize visual fidelity.
+- The generated components should be added to the existing PWA folder structure. 
+- Do not create a new project for each screen: add the screen within the existing project structure as all screens are related.
+
+## 4. ADD FIGMA LINK INTO THE FILE
+- Once you're done with the design, please follow these instructions: 
+    - Go to the file [./figma-links.md] 
+    - For each Figma link processed, you must first determine an appropriate screen name (e.g., "Jump Log Details," "Profile Settings") like "### [Determined name]".
+    - Under the name of the screen, add the status "Done" once you finished the design.
+    - Under the status, add the figma link I gave you.
+    - Add sufficient vertical spacing between the information to improve readability.
+
+## 5. VALIDATION LOOP
+- Display the following list at the end when you're done with the task.
+- [ ] I read the information contained in [./context.md] ;
+- [ ] The design is created ;
+- [ ] The component provides a direct and faithful implementation of the design element defined by the Figma link: at least 95% ;
+- [ ] The screen name, figma link and status has been added to [list-figma-links.md] ;
+- [ ] Dummy data structure is provided and used for rendering the component.

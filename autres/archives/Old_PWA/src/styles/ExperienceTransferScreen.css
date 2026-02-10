@@ -1,0 +1,277 @@
+/**
+ * ExperienceTransferScreen.css - Styling for the Experience Transfer Screen Component
+ *
+ * BEM Convention:
+ * - Block: .experience-transfer
+ * - Elements: .experience-transfer__*
+ * - Modifiers: .experience-transfer__button--primary
+ */
+
+/* Block: experience-transfer */
+.experience-transfer {
+  background-color: #ffffff;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Element: experience-transfer__refresh-indicator */
+.experience-transfer__refresh-indicator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: opacity 0.2s ease;
+}
+
+/* Element: experience-transfer__refresh-spinner */
+.experience-transfer__refresh-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #edeff1;
+  border-top-color: #155294;
+  border-radius: 50%;
+  animation: spin-experience 1s linear infinite;
+}
+
+@keyframes spin-experience {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Element: experience-transfer__header-section */
+.experience-transfer__header-section {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px 16px;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 50;
+  width: 100%;
+  max-width: 390px;
+  transition: padding 0.3s ease;
+}
+
+/* Modifier: experience-transfer__header-section--scrolled */
+.experience-transfer__header-section--scrolled {
+  padding: 24px 16px 16px;
+}
+
+/* Element: experience-transfer__header */
+.experience-transfer__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: experience-transfer__subtitle */
+.experience-transfer__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+  max-height: 48px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* Modifier: experience-transfer__subtitle--hidden */
+.experience-transfer__subtitle--hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+/* Element: experience-transfer__content */
+.experience-transfer__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 168px 16px 120px;
+  padding-bottom: 140px;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-y: visible;
+}
+
+/* Element: experience-transfer__steps-list */
+.experience-transfer__steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* Element: experience-transfer__step-item */
+.experience-transfer__step-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Element: experience-transfer__step-number-container */
+.experience-transfer__step-number-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Element: experience-transfer__step-number */
+.experience-transfer__step-number {
+  background-color: #d7e2ee;
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  flex-shrink: 0;
+}
+
+/* Element: experience-transfer__step-content */
+.experience-transfer__step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Element: experience-transfer__step-title */
+.experience-transfer__step-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+/* Element: experience-transfer__step-description */
+.experience-transfer__step-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #51565b;
+}
+
+/* Element: experience-transfer__divider */
+.experience-transfer__divider {
+  height: 1px;
+  background-color: #edeff1;
+  width: 100%;
+  margin: 16px 0;
+}
+
+/* Element: experience-transfer__bottom-nav */
+.experience-transfer__bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 390px;
+  z-index: 50;
+}
+
+/* Element: experience-transfer__button (Base) */
+.experience-transfer__button {
+  flex: 1;
+  height: 56px;
+  min-height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modifier: experience-transfer__button--secondary */
+.experience-transfer__button--secondary {
+  background-color: #ffffff;
+  border: 2px solid #155294;
+  color: #1a1c1d;
+}
+
+.experience-transfer__button--secondary:hover {
+  background-color: #f5f8fb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.15);
+}
+
+.experience-transfer__button--secondary:active {
+  transform: translateY(0);
+}
+
+/* Modifier: experience-transfer__button--primary */
+.experience-transfer__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
+
+.experience-transfer__button--primary:hover {
+  background-color: #0f3d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.3);
+}
+
+.experience-transfer__button--primary:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .experience-transfer__header {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .experience-transfer__subtitle {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,109 @@
+/**
+ * Toast.css - Styling for the Toast Notification Component
+ *
+ * BEM Convention:
+ * - Block: .toast
+ * - Elements: .toast__*
+ * - Modifiers: .toast--success, .toast--warning, .toast--error
+ */
+
+/* Block: toast */
+.toast {
+  position: fixed;
+  bottom: 104px; /* Position above the button container */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(100% - 32px);
+  max-width: 358px;
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Element: toast__container */
+.toast__container {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+}
+
+/* Element: toast__content */
+.toast__content {
+  flex: 1;
+  background-color: #1a1c1d;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+/* Element: toast__icon */
+.toast__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Element: toast__message */
+.toast__message {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Element: toast__close-button */
+.toast__close-button {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.toast__close-button:hover {
+  opacity: 0.7;
+}
+
+.toast__close-button:active {
+  opacity: 0.5;
+}
+
+/* Modifier: toast--success */
+.toast--success .toast__content {
+  background-color: #1a1c1d;
+}
+
+/* Modifier: toast--warning */
+.toast--warning .toast__content {
+  background-color: #b34b06;
+}
+
+/* Modifier: toast--error */
+.toast--error .toast__content {
+  background-color: #ba0808;
+}

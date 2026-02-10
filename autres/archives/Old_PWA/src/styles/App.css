@@ -1,0 +1,47 @@
+/* App.css - Main application styles */
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Screen container with slide transitions */
+.screen-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Slide right animation (forward navigation) */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  animation: slideInRight 300ms ease-out forwards;
+}
+
+/* Slide left animation (back navigation) */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideInLeft 300ms ease-out forwards;
+}

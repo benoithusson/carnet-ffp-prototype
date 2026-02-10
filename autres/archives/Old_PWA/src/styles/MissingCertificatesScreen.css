@@ -1,0 +1,299 @@
+/**
+ * MissingCertificatesScreen.css - Styling for the Missing Certificates Screen Component
+ *
+ * BEM Convention:
+ * - Block: .missing-certificates
+ * - Elements: .missing-certificates__*
+ * - Modifiers: .missing-certificates__button--primary, --secondary, --dashed
+ */
+
+/* Block: missing-certificates */
+.missing-certificates {
+  background-color: #fafafa;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Element: missing-certificates__refresh-indicator */
+.missing-certificates__refresh-indicator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: opacity 0.2s ease;
+}
+
+/* Element: missing-certificates__refresh-spinner */
+.missing-certificates__refresh-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #edeff1;
+  border-top-color: #155294;
+  border-radius: 50%;
+  animation: spin-missing-certificates 1s linear infinite;
+}
+
+@keyframes spin-missing-certificates {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Element: missing-certificates__header-section */
+.missing-certificates__header-section {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px 16px;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 50;
+  width: 100%;
+  max-width: 390px;
+  transition: padding 0.3s ease;
+}
+
+/* Modifier: missing-certificates__header-section--scrolled */
+.missing-certificates__header-section--scrolled {
+  padding: 24px 16px 16px;
+}
+
+/* Element: missing-certificates__progress-container */
+.missing-certificates__progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Element: missing-certificates__step-text */
+.missing-certificates__step-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+}
+
+/* Element: missing-certificates__progress-bar */
+.missing-certificates__progress-bar {
+  position: relative;
+  height: 7px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Element: missing-certificates__progress-bar-remaining */
+.missing-certificates__progress-bar-remaining {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #edeff1;
+  border-radius: 4px;
+}
+
+/* Element: missing-certificates__progress-bar-completed */
+.missing-certificates__progress-bar-completed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #155294;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Element: missing-certificates__header-content */
+.missing-certificates__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Element: missing-certificates__header */
+.missing-certificates__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: missing-certificates__subtitle */
+.missing-certificates__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+  max-height: 24px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* Modifier: missing-certificates__subtitle--hidden */
+.missing-certificates__subtitle--hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+/* Element: missing-certificates__content */
+.missing-certificates__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 175px 16px 120px;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: visible;
+  gap: 24px;
+}
+
+/* Modifier: missing-certificates__content--centered */
+.missing-certificates__content--centered {
+  justify-content: center;
+  padding: 175px 16px 120px;
+}
+
+/* Element: missing-certificates__cards-list */
+.missing-certificates__cards-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0;
+}
+
+/* Element: missing-certificates__bottom-nav */
+.missing-certificates__bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 390px;
+  z-index: 50;
+}
+
+/* Element: missing-certificates__button (Base) */
+.missing-certificates__button {
+  flex: 1;
+  height: 56px;
+  min-height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Modifier: missing-certificates__button--dashed */
+.missing-certificates__button--dashed {
+  background-color: transparent;
+  border: 2px dashed #51565b;
+  color: #51565b;
+  width: calc(100% - 32px);
+  max-width: 358px;
+  height: 56px;
+  max-height: 56px;
+  margin: 0 16px;
+}
+
+.missing-certificates__button--dashed:hover {
+  background-color: rgba(81, 86, 91, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(81, 86, 91, 0.1);
+}
+
+.missing-certificates__button--dashed:active {
+  transform: translateY(0);
+}
+
+/* Element: missing-certificates__button-icon */
+.missing-certificates__button-icon {
+  width: 24px;
+  height: 24px;
+  color: #51565b;
+}
+
+/* Modifier: missing-certificates__button--secondary */
+.missing-certificates__button--secondary {
+  background-color: #ffffff;
+  border: 2px solid #155294;
+  color: #1a1c1d;
+}
+
+.missing-certificates__button--secondary:hover {
+  background-color: #f5f8fb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.15);
+}
+
+.missing-certificates__button--secondary:active {
+  transform: translateY(0);
+}
+
+/* Modifier: missing-certificates__button--primary */
+.missing-certificates__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
+
+.missing-certificates__button--primary:hover {
+  background-color: #0f3d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.3);
+}
+
+.missing-certificates__button--primary:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .missing-certificates__header {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}

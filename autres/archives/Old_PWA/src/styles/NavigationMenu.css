@@ -1,0 +1,63 @@
+/**
+ * NavigationMenu.css - Styling for the Navigation Menu Component
+ */
+
+.nav-menu {
+  background-color: #fafafa;
+  padding: 24px 16px;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.nav-menu__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1a1c1d;
+  margin: 0 0 8px 0;
+}
+
+.nav-menu__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0 0 24px 0;
+}
+
+.nav-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-menu__item {
+  background-color: #ffffff;
+  border: 2px solid #155294;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1c1d;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  max-width: 280px;
+}
+
+.nav-menu__item:hover {
+  background-color: #f5f8fb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.15);
+}
+
+.nav-menu__item:active {
+  transform: translateY(0);
+  background-color: #155294;
+  color: #ffffff;
+}

@@ -1,0 +1,404 @@
+/**
+ * Connexion Screen Styles
+ * BEM Convention: connexion-screen
+ * Block: connexion-screen
+ * Elements: __header, __content, __input, __button, etc.
+ * Modifiers: --primary, --social, --with-trailing
+ */
+
+/* ========================================
+   BLOCK: connexion-screen
+   ======================================== */
+.connexion-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__header
+   Header section with title and subtitle
+   ======================================== */
+.connexion-screen__header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-11xl) var(--space-l) var(--space-l);
+  background-color: var(--bg-page);
+  border-bottom: var(--border-width-sm) solid var(--border-subtle);
+  width: 100%;
+}
+
+.connexion-screen__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  width: 100%;
+  max-width: 390px;
+}
+
+.connexion-screen__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-32);
+  color: var(--content-primary);
+  margin: 0;
+}
+
+.connexion-screen__subtitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  margin: 0;
+}
+
+.connexion-screen__link {
+  color: var(--content-link);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.connexion-screen__link:hover {
+  opacity: 0.8;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__content
+   Main content area with form
+   ======================================== */
+.connexion-screen__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl) var(--space-l) var(--space-11xl);
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__form-container
+   Container for all form inputs
+   ======================================== */
+.connexion-screen__form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+}
+
+/* ELEMENT: Inputs group - contains email and password inputs with 40px gap */
+.connexion-screen__inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6xl);
+  width: 100%;
+}
+
+/* ELEMENT: Password group - contains password input and forgot link with 8px gap */
+.connexion-screen__password-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__input-wrapper
+   Wrapper for individual input fields
+   ======================================== */
+.connexion-screen__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.connexion-screen__label {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+}
+
+.connexion-screen__input-container {
+  position: relative;
+  width: 100%;
+}
+
+.connexion-screen__input {
+  width: 100%;
+  height: 48px;
+  padding: var(--space-m) var(--space-l);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  background-color: var(--bg-page);
+  border: var(--border-width-sm) solid var(--border-input);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s ease;
+}
+
+.connexion-screen__input::placeholder {
+  color: var(--content-placeholder);
+}
+
+.connexion-screen__input:focus {
+  border-width: var(--border-width-xl);
+  border-color: var(--content-primary);
+  outline: none;
+}
+
+/* MODIFIER: Input with trailing button */
+.connexion-screen__input--with-trailing {
+  padding-right: 80px;
+}
+
+.connexion-screen__input-trailing {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 var(--space-l);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.connexion-screen__input-trailing:hover {
+  opacity: 0.7;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__forgot-password
+   Forgot password link container
+   ======================================== */
+.connexion-screen__forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.connexion-screen__forgot-link {
+  padding: var(--space-2xs);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-link);
+  text-decoration: underline;
+  border-radius: var(--radius-3xl);
+  cursor: pointer;
+}
+
+.connexion-screen__forgot-link:hover {
+  opacity: 0.8;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__remember-me
+   Remember me checkbox container
+   ======================================== */
+.connexion-screen__remember-me {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.connexion-screen__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  cursor: pointer;
+  position: relative;
+  padding-left: 44px;
+}
+
+.connexion-screen__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.connexion-screen__checkbox-custom {
+  position: absolute;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  border: var(--border-width-sm) solid var(--border-input);
+  border-radius: 4px;
+  background-color: var(--bg-page);
+  transition: all 0.2s ease;
+}
+
+.connexion-screen__checkbox:checked + .connexion-screen__checkbox-custom {
+  background-color: var(--bg-brand);
+  border-color: var(--bg-brand);
+}
+
+.connexion-screen__checkbox:checked + .connexion-screen__checkbox-custom::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.connexion-screen__checkbox:focus + .connexion-screen__checkbox-custom {
+  border-width: var(--border-width-xl);
+  border-color: var(--content-primary);
+}
+
+.connexion-screen__checkbox-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__button
+   Primary and social buttons
+   ======================================== */
+.connexion-screen__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-l);
+  width: 100%;
+  height: 56px;
+  min-height: 56px;
+  padding: var(--space-l);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  border-radius: var(--radius-3xl);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* MODIFIER: Primary button */
+.connexion-screen__button--primary {
+  background-color: var(--bg-brand);
+  color: var(--content-inverse);
+  border: none;
+}
+
+.connexion-screen__button--primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.connexion-screen__button--primary:active {
+  transform: translateY(0);
+}
+
+/* MODIFIER: Social button */
+.connexion-screen__button--social {
+  background-color: transparent;
+  color: var(--content-primary);
+  border: var(--border-width-md) solid var(--border-interactive);
+  position: relative;
+}
+
+.connexion-screen__button--social:hover {
+  border-color: var(--content-primary);
+  transform: translateY(-1px);
+}
+
+.connexion-screen__button--social:active {
+  transform: translateY(0);
+}
+
+.connexion-screen__social-icon {
+  position: absolute;
+  left: 14.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.connexion-screen__button-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__divider
+   Divider with "Ou" text
+   ======================================== */
+.connexion-screen__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+  width: 100%;
+}
+
+.connexion-screen__divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-subtle);
+}
+
+.connexion-screen__divider-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   ELEMENT: connexion-screen__social-container
+   Container for social login buttons
+   ======================================== */
+.connexion-screen__social-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  width: 100%;
+}
+
+/* ========================================
+   RESPONSIVE BEHAVIOR
+   ======================================== */
+@media (max-width: 390px) {
+  .connexion-screen__content {
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+  }
+}

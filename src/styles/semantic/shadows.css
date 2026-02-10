@@ -1,0 +1,12 @@
+/**
+ * Semantic Shadows
+ * Shadows from tokens.json (Figma)
+ */
+
+:root {
+  /* Shadows from Figma */
+  --shadow-bottom: 0px -3px 20px 0px rgba(26, 28, 29, 0.12);
+  --shadow-top: -3px 0px 20px 0px rgba(26, 28, 29, 0.12);
+  --shadow-card: 0px 5px 15px 10px rgba(26, 28, 29, 0.03);
+  --shadow-toast: 0px 8px 15px 0px rgba(25, 26, 27, 0.10);
+}

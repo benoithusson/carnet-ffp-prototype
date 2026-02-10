@@ -1,0 +1,27 @@
+/**
+ * Design System Tokens
+ * Complete design token system organized by layers
+ *
+ * Token Naming Convention:
+ * - Primitives: --color-*, --unit-*, --font-*
+ * - Semantic: --text-*, --bg-*, --border-*, --shadow-*
+ *
+ * Layer Order:
+ * 1. Primitives (base building blocks)
+ * 2. Semantic (purpose-driven tokens)
+ */
+
+/* ========================================
+   PRIMITIVES
+   ======================================== */
+@import './primitives/colors.css';
+@import './primitives/spacing.css';
+@import './primitives/typography.css';
+
+/* ========================================
+   SEMANTIC
+   ======================================== */
+@import './semantic/colors.css';
+@import './semantic/borders.css';
+@import './semantic/shadows.css';
+@import './semantic/typography.css';

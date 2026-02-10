@@ -1,0 +1,33 @@
+/* BEM Block: pull-to-refresh-indicator */
+.pull-to-refresh-indicator {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.pull-to-refresh-indicator__spinner {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease;
+}
+
+/* BEM Modifier: spinner--spinning */
+.pull-to-refresh-indicator__spinner--spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

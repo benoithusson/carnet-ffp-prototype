@@ -1,0 +1,341 @@
+/**
+ * TerminerInscription Component Styles
+ * BEM Convention: terminer-inscription (Block)
+ *
+ * Structure:
+ * - terminer-inscription (Block)
+ *   - terminer-inscription__header (Element)
+ *   - terminer-inscription__content (Element)
+ *   - terminer-inscription__photo-container (Element)
+ *   - terminer-inscription__form (Element)
+ *   - terminer-inscription__input-wrapper (Element)
+ *   - terminer-inscription__button (Element)
+ */
+
+/* Block: Main Container */
+.terminer-inscription {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-3xl);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Element: Header */
+.terminer-inscription__header {
+  width: 100%;
+  background-color: var(--bg-page);
+  padding: var(--space-11xl) var(--space-l) var(--space-l);
+  border-bottom: var(--border-width-sm) solid var(--border-subtle);
+  box-shadow: 0px 3px 8px 0px rgba(26, 28, 29, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.terminer-inscription__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.terminer-inscription__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-32);
+  color: var(--content-primary);
+  margin: 0;
+}
+
+.terminer-inscription__subtitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  margin: 0;
+}
+
+/* Element: Content */
+.terminer-inscription__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-l);
+  width: 100%;
+  padding: 0;
+  padding-top: 160px;
+  overflow-y: auto;
+  flex: 1;
+  height: 100%;
+}
+
+/* Element: Photo Container */
+.terminer-inscription__photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-l);
+}
+
+.terminer-inscription__photo-wrapper {
+  position: relative;
+  width: 104px;
+  height: 109px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.terminer-inscription__photo {
+  width: 101px;
+  height: 101px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-gray-200);
+}
+
+.terminer-inscription__photo--placeholder {
+  border: 2px dashed var(--color-gray-400);
+  background-color: var(--color-gray-100);
+}
+
+.terminer-inscription__photo-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background-color: #f9fafc;
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px 0px rgba(16, 18, 20, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.terminer-inscription__photo-badge:hover {
+  transform: scale(1.05);
+}
+
+.terminer-inscription__camera-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--content-primary);
+}
+
+.terminer-inscription__photo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--content-primary);
+}
+
+.terminer-inscription__photo-input {
+  display: none;
+}
+
+/* Element: Form */
+.terminer-inscription__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  width: 100%;
+  padding: 0 var(--space-l);
+}
+
+/* Element: Input Wrapper */
+.terminer-inscription__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+}
+
+.terminer-inscription__label {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+}
+
+.terminer-inscription__input-container {
+  position: relative;
+  width: 100%;
+}
+
+.terminer-inscription__input {
+  width: 100%;
+  height: 48px;
+  padding: var(--space-m) var(--space-l);
+  border: var(--border-width-sm) solid var(--border-input);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  background-color: var(--bg-page);
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.terminer-inscription__input::placeholder {
+  color: var(--content-placeholder);
+}
+
+.terminer-inscription__input:focus {
+  outline: none;
+  border-width: var(--border-width-xl);
+  border-color: var(--border-input);
+}
+
+.terminer-inscription__input--with-trailing {
+  padding-right: 60px;
+}
+
+.terminer-inscription__input-trailing {
+  position: absolute;
+  right: var(--space-l);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  pointer-events: none;
+}
+
+.terminer-inscription__input-trailing-button {
+  position: absolute;
+  right: var(--space-l);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.terminer-inscription__input-message {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  margin: 0;
+}
+
+/* Element: Password Section */
+.terminer-inscription__password-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  width: 100%;
+}
+
+/* Element: Password Criteria */
+.terminer-inscription__password-criteria {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  width: 100%;
+}
+
+/* Element: Badge */
+.terminer-inscription__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-s);
+  padding: var(--space-2xs) var(--space-m);
+  background-color: #dce2e9;
+  border-radius: var(--radius-3xl);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+/* Modifier: Valid Badge */
+.terminer-inscription__badge--valid {
+  background-color: var(--color-success-100);
+  color: var(--color-success-500);
+}
+
+/* Element: Badge Icon */
+.terminer-inscription__badge-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Element: Button */
+.terminer-inscription__button {
+  width: 358px;
+  max-width: calc(100% - var(--space-4xl));
+  height: 56px;
+  min-height: 56px;
+  padding: var(--space-l);
+  margin: 0 var(--space-l) var(--space-l);
+  background-color: var(--bg-brand);
+  border: none;
+  border-radius: var(--radius-3xl);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-inverse);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terminer-inscription__button:hover {
+  opacity: 0.9;
+}
+
+.terminer-inscription__button:active {
+  transform: scale(0.98);
+}
+
+/* Remove spinner from number input */
+.terminer-inscription__input[type="number"]::-webkit-inner-spin-button,
+.terminer-inscription__input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.terminer-inscription__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .terminer-inscription__button {
+    width: calc(100% - var(--space-4xl));
+  }
+}

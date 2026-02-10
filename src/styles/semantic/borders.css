@@ -1,0 +1,49 @@
+/**
+ * Semantic Borders
+ * Border widths, radius, and colors
+ */
+
+:root {
+  /* Border Widths */
+  --border-width-none: 0;
+  --border-width-xs: 0.5px;
+  --border-width-sm: 1px;
+  --border-width-md: 1.5px;
+  --border-width-lg: 2px;
+  --border-width-xl: 4px;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 48px;
+  --radius-full: 9999px;
+
+  /* Border Colors */
+  --border-default: var(--color-gray-300);
+  --border-subtle: var(--color-gray-200);
+  --border-strong: var(--color-gray-600);
+  --border-dark: var(--color-gray-900);
+  --border-inverse: var(--color-gray-0);
+
+  /* Interactive Border Colors */
+  --border-interactive: var(--color-gray-600);
+  --border-hover: var(--color-gray-700);
+  --border-focus: var(--color-gray-900);
+  --border-disabled: var(--color-gray-400);
+
+  /* Status Border Colors */
+  --border-brand: var(--color-brand-500);
+  --border-success: var(--color-green-500);
+  --border-success-subtle: var(--color-green-200);
+  --border-warning: var(--color-orange-500);
+  --border-warning-subtle: var(--color-orange-200);
+  --border-error: var(--color-red-500);
+  --border-error-subtle: var(--color-red-200);
+  --border-info: var(--color-brand-500);
+  --border-info-subtle: var(--color-brand-200);
+}

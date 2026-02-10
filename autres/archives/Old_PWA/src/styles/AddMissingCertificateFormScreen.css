@@ -1,0 +1,202 @@
+/* ========================================
+   BEM Block: add-missing-certificate-form
+   Form for adding missing certificate details
+   ======================================== */
+
+.add-missing-certificate-form {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* ========================================
+   Header Section
+   Contains title and close button
+   ======================================== */
+
+.add-missing-certificate-form__header {
+  background-color: #ffffff;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  padding: 60px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+}
+
+.add-missing-certificate-form__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Semi Bold */
+  line-height: 24px;
+  color: #1a1c1d; /* text-default */
+  margin: 0;
+  flex: 1;
+}
+
+.add-missing-certificate-form__close-button {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.add-missing-certificate-form__close-button:hover {
+  opacity: 0.7;
+}
+
+.add-missing-certificate-form__close-button:active {
+  opacity: 0.5;
+}
+
+.add-missing-certificate-form__close-icon {
+  width: 32px;
+  height: 32px;
+  color: #1a1c1d; /* text-default */
+}
+
+/* ========================================
+   Content Section
+   Form fields container
+   ======================================== */
+
+.add-missing-certificate-form__content {
+  flex: 1;
+  padding: 24px 16px;
+}
+
+.add-missing-certificate-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 358px;
+  margin: 0 auto;
+}
+
+/* Form Field */
+.add-missing-certificate-form__field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-missing-certificate-form__field:hover {
+  background-color: rgba(26, 28, 29, 0.02);
+}
+
+.add-missing-certificate-form__field:active {
+  background-color: rgba(26, 28, 29, 0.05);
+}
+
+.add-missing-certificate-form__field-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.add-missing-certificate-form__field-icon {
+  width: 24px;
+  height: 24px;
+  color: #1a1c1d; /* text-default */
+  flex-shrink: 0;
+}
+
+.add-missing-certificate-form__field-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Medium */
+  line-height: 24px;
+  color: #1a1c1d; /* text-default */
+  text-align: left;
+  flex: 1;
+}
+
+.add-missing-certificate-form__field-chevron {
+  width: 24px;
+  height: 24px;
+  color: #1a1c1d; /* text-default */
+  flex-shrink: 0;
+}
+
+/* Divider */
+.add-missing-certificate-form__divider {
+  height: 1px;
+  background-color: #edeff1; /* border-neutral-default */
+  width: 100%;
+}
+
+/* ========================================
+   Bottom Action Button
+   ======================================== */
+
+.add-missing-certificate-form__actions {
+  background-color: #ffffff;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-missing-certificate-form__submit-button {
+  width: 100%;
+  max-width: 358px;
+  height: 56px;
+  min-height: 56px;
+  background-color: #155294; /* button-primary-surface: blue-500 */
+  border: none;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Medium */
+  line-height: 24px;
+  color: #ffffff; /* text-reverse */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin: 0 auto;
+}
+
+.add-missing-certificate-form__submit-button:hover {
+  background-color: #114276; /* blue-600 */
+}
+
+.add-missing-certificate-form__submit-button:active {
+  background-color: #0d3159; /* blue-700 */
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
+@media (max-width: 390px) {
+  .add-missing-certificate-form__content {
+    padding: 24px 16px;
+  }
+
+  .add-missing-certificate-form__fields {
+    max-width: 100%;
+  }
+
+  .add-missing-certificate-form__submit-button {
+    max-width: 100%;
+  }
+}

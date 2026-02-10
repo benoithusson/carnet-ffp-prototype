@@ -1,0 +1,84 @@
+/**
+ * Semantic Colors
+ * Purpose-driven color tokens that reference primitives
+ */
+
+:root {
+  /* Text Colors */
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-800);
+  --text-tertiary: var(--color-gray-700);
+  --text-disabled: var(--color-gray-400);
+  --text-placeholder: var(--color-gray-500);
+  --text-inverse: var(--color-gray-0);
+  --text-link: var(--color-brand-500);
+  --text-link-hover: var(--color-brand-600);
+  --text-link-active: var(--color-brand-800);
+
+  /* Background Colors */
+  --bg-page: var(--color-gray-0);
+  --bg-surface: var(--color-gray-0);
+  --bg-surface-secondary: var(--color-gray-100);
+  --bg-surface-tertiary: var(--color-gray-200);
+  --bg-overlay: var(--color-gray-50);
+  --bg-inverse: var(--color-gray-900);
+
+  /* Brand Backgrounds */
+  --bg-brand: var(--color-brand-500);
+  --bg-brand-subtle: var(--color-brand-100);
+  --bg-brand-hover: var(--color-brand-600);
+  --bg-brand-active: var(--color-brand-800);
+
+  /* Interactive Backgrounds */
+  --bg-hover: var(--color-gray-200);
+  --bg-active: var(--color-gray-300);
+  --bg-selected: var(--color-gray-300);
+  --bg-disabled: var(--color-gray-400);
+
+  /* Status Colors - Success */
+  --color-success: var(--color-green-500);
+  --color-success-subtle: var(--color-green-100);
+  --bg-success: var(--color-green-500);
+  --bg-success-subtle: var(--color-green-100);
+  --text-success: var(--color-green-800);
+  --border-success: var(--color-green-500);
+
+  /* Status Colors - Warning */
+  --color-warning: var(--color-orange-500);
+  --color-warning-subtle: var(--color-orange-100);
+  --bg-warning: var(--color-orange-500);
+  --bg-warning-subtle: var(--color-orange-100);
+  --text-warning: var(--color-orange-800);
+  --border-warning: var(--color-orange-500);
+
+  /* Status Colors - Error */
+  --color-error: var(--color-red-500);
+  --color-error-subtle: var(--color-red-100);
+  --bg-error: var(--color-red-500);
+  --bg-error-subtle: var(--color-red-100);
+  --bg-error-hover: var(--color-red-600);
+  --bg-error-active: var(--color-red-800);
+  --text-error: var(--color-red-800);
+  --border-error: var(--color-red-500);
+
+  /* Status Colors - Info */
+  --color-info: var(--color-brand-500);
+  --color-info-subtle: var(--color-brand-100);
+  --bg-info: var(--color-brand-500);
+  --bg-info-subtle: var(--color-brand-100);
+  --text-info: var(--color-brand-800);
+  --border-info: var(--color-brand-500);
+
+  /* Icon Colors */
+  --icon-primary: var(--text-primary);
+  --icon-secondary: var(--text-secondary);
+  --icon-tertiary: var(--text-tertiary);
+  --icon-disabled: var(--text-disabled);
+  --icon-inverse: var(--text-inverse);
+  --icon-brand: var(--color-brand-500);
+  --icon-success: var(--color-success);
+  --icon-warning: var(--color-warning);
+  --icon-error: var(--color-error);
+  --icon-info: var(--color-info);
+  --icon-rating: var(--color-orange-400);
+}

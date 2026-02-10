@@ -1,0 +1,220 @@
+/* ========================================
+   BEM Block: missing-certificates-list
+   Screen for adding missing certificates/qualifications
+   ======================================== */
+
+.missing-certificates-list {
+  background-color: #fafafa; /* gray-100 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+/* ========================================
+   Header Section
+   Contains progress indicator, title, and subtitle
+   ======================================== */
+
+.missing-certificates-list__header {
+  background-color: #ffffff; /* gray-0 */
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  padding: 60px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Progress Indicator */
+.missing-certificates-list__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.missing-certificates-list__progress-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #51565b; /* text-secondary */
+  margin: 0;
+}
+
+.missing-certificates-list__progress-bars {
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+
+.missing-certificates-list__progress-bar {
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.missing-certificates-list__progress-bar--total {
+  width: 100%;
+  background-color: #edeff1; /* gray-200 */
+  left: 0;
+}
+
+.missing-certificates-list__progress-bar--completed {
+  width: 55.32%; /* 3/5 steps ≈ 60%, matches design */
+  background-color: #155294; /* blue-500 */
+  left: 0;
+  z-index: 1;
+}
+
+/* Header Content */
+.missing-certificates-list__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.missing-certificates-list__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Semi Bold */
+  line-height: 24px;
+  color: #1a1c1d; /* text-default */
+  margin: 0;
+}
+
+.missing-certificates-list__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #51565b; /* text-secondary */
+  margin: 0;
+}
+
+/* ========================================
+   Main Content Area
+   ======================================== */
+
+.missing-certificates-list__content {
+  flex: 1;
+  padding: 24px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Dashed Add Button */
+.missing-certificates-list__add-button {
+  width: 100%;
+  max-width: 358px;
+  height: 56px;
+  background-color: transparent;
+  border: 2px dashed #51565b; /* button-dashed-border */
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 16px;
+}
+
+.missing-certificates-list__add-button:hover {
+  border-color: #1a1c1d;
+  background-color: rgba(26, 28, 29, 0.02);
+}
+
+.missing-certificates-list__add-button:active {
+  background-color: rgba(26, 28, 29, 0.05);
+}
+
+.missing-certificates-list__add-icon {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #51565b; /* text-secondary */
+}
+
+.missing-certificates-list__add-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Medium */
+  line-height: 24px;
+  color: #51565b; /* text-secondary */
+  white-space: nowrap;
+}
+
+/* ========================================
+   Bottom Action Buttons
+   ======================================== */
+
+.missing-certificates-list__actions {
+  background-color: #ffffff; /* surface-component */
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+  padding: 32px 16px;
+  display: flex;
+  gap: 16px;
+}
+
+.missing-certificates-list__button {
+  flex: 1;
+  height: 56px;
+  min-height: 56px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Medium */
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 16px;
+}
+
+/* Secondary Button (Retour) */
+.missing-certificates-list__button--secondary {
+  background-color: #ffffff;
+  border: 2px solid #155294; /* button-secondary-border: blue-500 */
+  color: #1a1c1d; /* button-secondary-label */
+}
+
+.missing-certificates-list__button--secondary:hover {
+  background-color: #f5f8fb;
+  border-color: #114276;
+}
+
+.missing-certificates-list__button--secondary:active {
+  background-color: #eef3f8;
+}
+
+/* Primary Button (Passer) */
+.missing-certificates-list__button--primary {
+  background-color: #155294; /* button-primary-surface: blue-500 */
+  border: none;
+  color: #ffffff; /* text-reverse */
+}
+
+.missing-certificates-list__button--primary:hover {
+  background-color: #114276; /* blue-600 */
+}
+
+.missing-certificates-list__button--primary:active {
+  background-color: #0d3159; /* blue-700 */
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
+@media (max-width: 390px) {
+  .missing-certificates-list__content {
+    padding: 24px 16px;
+  }
+
+  .missing-certificates-list__add-button {
+    max-width: 100%;
+  }
+}

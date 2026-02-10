@@ -1,0 +1,388 @@
+/**
+ * LoginScreen.css - Styling for the Login Screen Component
+ *
+ * BEM Convention:
+ * - Block: .login-screen
+ * - Elements: .login-screen__*
+ * - Modifiers: .login-screen__button--primary, .login-screen__button--social
+ */
+
+/* Block: login-screen */
+.login-screen {
+  background-color: #ffffff;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Element: login-screen__content */
+.login-screen__content {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 24px 16px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 50px 50px 0 0;
+}
+
+.login-screen__content > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.login-screen__content > .login-screen__social-buttons {
+  margin-bottom: 16px;
+}
+
+/* Element: login-screen__header */
+.login-screen__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: login-screen__form */
+.login-screen__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* Element: login-screen__input-group */
+.login-screen__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+}
+
+.login-screen__input-group:first-of-type {
+  margin-bottom: 40px;
+}
+
+/* Element: login-screen__error-message */
+.login-screen__error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: calc(24px + 48px + 4px);
+  left: 0;
+  width: 100%;
+}
+
+.login-screen__error-message svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.login-screen__error-message span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #c1121f;
+}
+
+/* Element: login-screen__label */
+.login-screen__label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+/* Element: login-screen__input */
+.login-screen__input {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #51565b;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.login-screen__input::placeholder {
+  color: #b0b5bb;
+}
+
+.login-screen__input:focus {
+  outline: none;
+  border-color: #155294;
+}
+
+/* Modifier: login-screen__input--error */
+.login-screen__input--error {
+  border-color: #c1121f;
+}
+
+.login-screen__input--error:focus {
+  border-color: #c1121f;
+}
+
+/* Element: login-screen__input-wrapper */
+.login-screen__input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.login-screen__input-wrapper ~ .login-screen__error-message {
+  top: calc(24px + 48px + 4px);
+}
+
+.login-screen__input-wrapper .login-screen__input {
+  padding-right: 80px;
+}
+
+/* Element: login-screen__toggle-password */
+.login-screen__toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Element: login-screen__forgot-password-container */
+.login-screen__forgot-password-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* When there's a password error, add extra spacing */
+.login-screen__input-group:has(.login-screen__input--error) ~ .login-screen__forgot-password-container {
+  margin-top: 36px;
+}
+
+/* Element: login-screen__forgot-password-link */
+.login-screen__forgot-password-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #155294;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.login-screen__forgot-password-link:hover {
+  opacity: 0.8;
+}
+
+/* Element: login-screen__checkbox-group */
+.login-screen__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Element: login-screen__checkbox */
+.login-screen__checkbox {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #51565b;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #ffffff;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.login-screen__checkbox:checked {
+  background-color: #1a1c1d;
+  border-color: #1a1c1d;
+}
+
+.login-screen__checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Element: login-screen__checkbox-label */
+.login-screen__checkbox-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #51565b;
+  cursor: pointer;
+}
+
+/* Element: login-screen__button (Base) */
+.login-screen__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+}
+
+/* Modifier: login-screen__button--primary */
+.login-screen__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
+
+.login-screen__button--primary:hover {
+  background-color: #0f3d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.3);
+}
+
+.login-screen__button--primary:active {
+  transform: translateY(0);
+}
+
+/* Modifier: login-screen__button--social */
+.login-screen__button--social {
+  background-color: #ffffff;
+  color: #1a1c1d;
+  border: 2px solid #155294;
+  position: relative;
+}
+
+.login-screen__button--social:hover {
+  background-color: #f5f7fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.15);
+}
+
+.login-screen__button--social:active {
+  transform: translateY(0);
+}
+
+/* Element: login-screen__divider */
+.login-screen__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Element: login-screen__divider-line */
+.login-screen__divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #edeff1;
+}
+
+/* Element: login-screen__divider-text */
+.login-screen__divider-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #51565b;
+}
+
+/* Element: login-screen__social-buttons */
+.login-screen__social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Element: login-screen__social-icon */
+.login-screen__social-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Element: login-screen__signup-container */
+.login-screen__signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 24px;
+  width: 100%;
+}
+
+/* Element: login-screen__signup-text */
+.login-screen__signup-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: login-screen__signup-link */
+.login-screen__signup-link {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #155294;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.login-screen__signup-link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .login-screen__header {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

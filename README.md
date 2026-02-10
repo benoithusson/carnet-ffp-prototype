@@ -1,296 +1,177 @@
-# Context Engineering Template
+# Carnet FFP - PWA Project
 
-A comprehensive template for getting started with Context Engineering - the discipline of engineering context for AI coding assistants so they have the information necessary to get the job done end to end.
+## 📖 Project Overview
+A Progressive Web App (PWA) prototype for a skydiving jump log that allows skydivers to digitally log, view, and manage their complete jump history.
 
-> **Context Engineering is 10x better than prompt engineering and 100x better than vibe coding.**
+---
 
-## 🚀 Quick Start
-
-```bash
-# 1. Clone this template
-git clone https://github.com/coleam00/Context-Engineering-Intro.git
-cd Context-Engineering-Intro
-
-# 2. Set up your project rules (optional - template provided)
-# Edit CLAUDE.md to add your project-specific guidelines
-
-# 3. Add examples (highly recommended)
-# Place relevant code examples in the examples/ folder
-
-# 4. Create your initial feature request
-# Edit INITIAL.md with your feature requirements
-
-# 5. Generate a comprehensive PRP (Product Requirements Prompt)
-# In Claude Code, run:
-/generate-prp INITIAL.md
-
-# 6. Execute the PRP to implement your feature
-# In Claude Code, run:
-/execute-prp PRPs/your-feature-name.md
-```
-
-## 📚 Table of Contents
-
-- [What is Context Engineering?](#what-is-context-engineering)
-- [Template Structure](#template-structure)
-- [Step-by-Step Guide](#step-by-step-guide)
-- [Writing Effective INITIAL.md Files](#writing-effective-initialmd-files)
-- [The PRP Workflow](#the-prp-workflow)
-- [Using Examples Effectively](#using-examples-effectively)
-- [Best Practices](#best-practices)
-
-## What is Context Engineering?
-
-Context Engineering represents a paradigm shift from traditional prompt engineering:
-
-### Prompt Engineering vs Context Engineering
-
-**Prompt Engineering:**
-- Focuses on clever wording and specific phrasing
-- Limited to how you phrase a task
-- Like giving someone a sticky note
-
-**Context Engineering:**
-- A complete system for providing comprehensive context
-- Includes documentation, examples, rules, patterns, and validation
-- Like writing a full screenplay with all the details
-
-### Why Context Engineering Matters
-
-1. **Reduces AI Failures**: Most agent failures aren't model failures - they're context failures
-2. **Ensures Consistency**: AI follows your project patterns and conventions
-3. **Enables Complex Features**: AI can handle multi-step implementations with proper context
-4. **Self-Correcting**: Validation loops allow AI to fix its own mistakes
-
-## Template Structure
+## 🗂️ Project Structure
 
 ```
-context-engineering-intro/
+carnet-ffp-2/
 ├── .claude/
-│   ├── commands/
-│   │   ├── generate-prp.md    # Generates comprehensive PRPs
-│   │   └── execute-prp.md     # Executes PRPs to implement features
-│   └── settings.local.json    # Claude Code permissions
-├── PRPs/
-│   ├── templates/
-│   │   └── prp_base.md       # Base template for PRPs
-│   └── EXAMPLE_multi_agent_prp.md  # Example of a complete PRP
-├── examples/                  # Your code examples (critical!)
-├── CLAUDE.md                 # Global rules for AI assistant
-├── INITIAL.md               # Template for feature requests
-├── INITIAL_EXAMPLE.md       # Example feature request
-└── README.md                # This file
+│   └── commands/
+│       ├── execute-prp.md      # Main command to build screens
+│       └── delete-prp.md       # Command to delete screens
+├── design/
+│   └── guidelines-components.md # UI/UX interaction guidelines
+├── PWA/                         # Main application folder
+│   └── src/
+│       └── styles/
+│           └── main.css        # Global styles
+├── context.md                   # Project context & technical requirements
+├── figma-links.md              # Figma designs progress tracker
+└── README.md                    # This file
 ```
 
-This template doesn't focus on RAG and tools with context engineering because I have a LOT more in store for that soon. ;)
+---
 
-## Step-by-Step Guide
+## 🚀 Quick Start Workflow
 
-### 1. Set Up Global Rules (CLAUDE.md)
+### **To Build a New Screen from Figma:**
 
-The `CLAUDE.md` file contains project-wide rules that the AI assistant will follow in every conversation. The template includes:
+1. **Run the command:**
+   ```
+   /execute-prp <figma-link>
+   ```
+   Or simply:
+   ```
+   /execute-prp
+   ```
+   *(It will automatically pick the first non-DONE screen from `figma-links.md`)*
 
-- **Project awareness**: Reading planning docs, checking tasks
-- **Code structure**: File size limits, module organization
-- **Testing requirements**: Unit test patterns, coverage expectations
-- **Style conventions**: Language preferences, formatting rules
-- **Documentation standards**: Docstring formats, commenting practices
+2. **What happens automatically:**
+   - ✅ Loads project context from `context.md`
+   - ✅ Reads design guidelines from `design/guidelines-components.md`
+   - ✅ Extracts Figma design
+   - ✅ Checks existing CSS styles
+   - ✅ Builds React component with BEM CSS
+   - ✅ Adds component to PWA folder
+   - ✅ Updates main menu with navigation link
+   - ✅ Marks screen as DONE in `figma-links.md`
 
-**You can use the provided template as-is or customize it for your project.**
+### **To Delete a Screen:**
 
-### 2. Create Your Initial Feature Request
-
-Edit `INITIAL.md` to describe what you want to build:
-
-```markdown
-## FEATURE:
-[Describe what you want to build - be specific about functionality and requirements]
-
-## EXAMPLES:
-[List any example files in the examples/ folder and explain how they should be used]
-
-## DOCUMENTATION:
-[Include links to relevant documentation, APIs, or MCP server resources]
-
-## OTHER CONSIDERATIONS:
-[Mention any gotchas, specific requirements, or things AI assistants commonly miss]
+```
+/delete-prp <screen-name>
 ```
 
-**See `INITIAL_EXAMPLE.md` for a complete example.**
+---
 
-### 3. Generate the PRP
+## 📋 Key Files Explained
 
-PRPs (Product Requirements Prompts) are comprehensive implementation blueprints that include:
+### **context.md**
+Contains all project requirements:
+- Your role as Junior Frontend Developer
+- Tech stack (React, Vanilla CSS, BEM)
+- Project structure rules
+- Development constraints
 
-- Complete context and documentation
-- Implementation steps with validation
-- Error handling patterns
-- Test requirements
+### **figma-links.md**
+Progress tracker for all Figma designs:
+- List of all screens to implement
+- Mark screens as DONE when completed
+- Track overall progress
 
-They are similar to PRDs (Product Requirements Documents) but are crafted more specifically to instruct an AI coding assistant.
+### **design/guidelines-components.md**
+UI/UX behavior specifications:
+- Input field behaviors
+- Header interactions
+- Radio button defaults
+- CTA positioning rules
 
-Run in Claude Code:
+### **.claude/commands/execute-prp.md**
+Automated workflow for building screens:
+- 8-step process from context loading to validation
+- Ensures consistency across all screens
+- Automatic progress tracking
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: ReactJS
+- **Styling**: Vanilla CSS only (no Tailwind)
+- **Convention**: BEM (Block Element Modifier)
+- **Build Tool**: No Vite
+- **Data**: Dummy data only (no backend)
+
+---
+
+## 📱 Testing
+
+Run the app locally:
 ```bash
-/generate-prp INITIAL.md
+cd PWA
+npm run start
 ```
 
-**Note:** The slash commands are custom commands defined in `.claude/commands/`. You can view their implementation:
-- `.claude/commands/generate-prp.md` - See how it researches and creates PRPs
-- `.claude/commands/execute-prp.md` - See how it implements features from PRPs
+For mobile testing:
+- Use ngrok to expose local server
+- Install PWA on iPhone for testing
 
-The `$ARGUMENTS` variable in these commands receives whatever you pass after the command name (e.g., `INITIAL.md` or `PRPs/your-feature.md`).
+---
 
-This command will:
-1. Read your feature request
-2. Research the codebase for patterns
-3. Search for relevant documentation
-4. Create a comprehensive PRP in `PRPs/your-feature-name.md`
+## 🎯 Design Principles
 
-### 4. Execute the PRP
+- **Visual Fidelity**: Match Figma designs as closely as possible
+- **BEM Convention**: All CSS classes follow BEM strictly
+- **Component Reuse**: Reuse existing components when possible
+- **KISS Principle**: Keep It Simple, Stupid
+- **Junior-Level Code**: Write straightforward, readable code
 
-Once generated, execute the PRP to implement your feature:
+---
 
-```bash
-/execute-prp PRPs/your-feature-name.md
-```
+## ✅ Workflow Best Practices
 
-The AI coding assistant will:
-1. Read all context from the PRP
-2. Create a detailed implementation plan
-3. Execute each step with validation
-4. Run tests and fix any issues
-5. Ensure all success criteria are met
+1. **One screen at a time**: Build screens sequentially
+2. **Check existing styles**: Reuse CSS classes from `main.css`
+3. **Update menu**: Always add navigation links
+4. **Mark as done**: Update `figma-links.md` after completion
+5. **Follow BEM**: Use proper Block__Element--Modifier naming
 
-## Writing Effective INITIAL.md Files
+---
 
-### Key Sections Explained
+## 🔗 File Linking System
 
-**FEATURE**: Be specific and comprehensive
-- ❌ "Build a web scraper"
-- ✅ "Build an async web scraper using BeautifulSoup that extracts product data from e-commerce sites, handles rate limiting, and stores results in PostgreSQL"
+All markdown files are linked with **absolute paths** to ensure commands work correctly from any directory:
 
-**EXAMPLES**: Leverage the examples/ folder
-- Place relevant code patterns in `examples/`
-- Reference specific files and patterns to follow
-- Explain what aspects should be mimicked
+- `context.md` → Links to `figma-links.md`, `design/guidelines-components.md`, `PWA/src/styles/main.css`
+- `execute-prp.md` → Links to all project files
+- `delete-prp.md` → Links to PWA folder and `figma-links.md`
 
-**DOCUMENTATION**: Include all relevant resources
-- API documentation URLs
-- Library guides
-- MCP server documentation
-- Database schemas
+This ensures automation works seamlessly when you run commands.
 
-**OTHER CONSIDERATIONS**: Capture important details
-- Authentication requirements
-- Rate limits or quotas
-- Common pitfalls
-- Performance requirements
+---
 
-## The PRP Workflow
+## 📊 Progress Tracking
 
-### How /generate-prp Works
+Check `figma-links.md` for:
+- Total number of screens
+- Completed screens (marked with `- DONE`)
+- Remaining screens to implement
 
-The command follows this process:
+---
 
-1. **Research Phase**
-   - Analyzes your codebase for patterns
-   - Searches for similar implementations
-   - Identifies conventions to follow
+## 🤝 Contributing
 
-2. **Documentation Gathering**
-   - Fetches relevant API docs
-   - Includes library documentation
-   - Adds gotchas and quirks
+When adding new screens:
+1. Add Figma link to `figma-links.md`
+2. Run `/execute-prp` command
+3. Verify component works in browser
+4. Check that main menu link is added
+5. Confirm screen is marked DONE
 
-3. **Blueprint Creation**
-   - Creates step-by-step implementation plan
-   - Includes validation gates
-   - Adds test requirements
+---
 
-4. **Quality Check**
-   - Scores confidence level (1-10)
-   - Ensures all context is included
+## 📝 Notes
 
-### How /execute-prp Works
+- **No emojis** in code unless explicitly requested
+- **Dummy data only** - no API calls
+- **Smooth animations** - but avoid heavy effects
+- **Mobile-first** - design for mobile display
+- **BEM strict** - makes debugging easier
 
-1. **Load Context**: Reads the entire PRP
-2. **Plan**: Creates detailed task list using TodoWrite
-3. **Execute**: Implements each component
-4. **Validate**: Runs tests and linting
-5. **Iterate**: Fixes any issues found
-6. **Complete**: Ensures all requirements met
+---
 
-See `PRPs/EXAMPLE_multi_agent_prp.md` for a complete example of what gets generated.
-
-## Using Examples Effectively
-
-The `examples/` folder is **critical** for success. AI coding assistants perform much better when they can see patterns to follow.
-
-### What to Include in Examples
-
-1. **Code Structure Patterns**
-   - How you organize modules
-   - Import conventions
-   - Class/function patterns
-
-2. **Testing Patterns**
-   - Test file structure
-   - Mocking approaches
-   - Assertion styles
-
-3. **Integration Patterns**
-   - API client implementations
-   - Database connections
-   - Authentication flows
-
-4. **CLI Patterns**
-   - Argument parsing
-   - Output formatting
-   - Error handling
-
-### Example Structure
-
-```
-examples/
-├── README.md           # Explains what each example demonstrates
-├── cli.py             # CLI implementation pattern
-├── agent/             # Agent architecture patterns
-│   ├── agent.py      # Agent creation pattern
-│   ├── tools.py      # Tool implementation pattern
-│   └── providers.py  # Multi-provider pattern
-└── tests/            # Testing patterns
-    ├── test_agent.py # Unit test patterns
-    └── conftest.py   # Pytest configuration
-```
-
-## Best Practices
-
-### 1. Be Explicit in INITIAL.md
-- Don't assume the AI knows your preferences
-- Include specific requirements and constraints
-- Reference examples liberally
-
-### 2. Provide Comprehensive Examples
-- More examples = better implementations
-- Show both what to do AND what not to do
-- Include error handling patterns
-
-### 3. Use Validation Gates
-- PRPs include test commands that must pass
-- AI will iterate until all validations succeed
-- This ensures working code on first try
-
-### 4. Leverage Documentation
-- Include official API docs
-- Add MCP server resources
-- Reference specific documentation sections
-
-### 5. Customize CLAUDE.md
-- Add your conventions
-- Include project-specific rules
-- Define coding standards
-
-## Resources
-
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [Context Engineering Best Practices](https://www.philschmid.de/context-engineering)
+**Last Updated**: 2026-02-10

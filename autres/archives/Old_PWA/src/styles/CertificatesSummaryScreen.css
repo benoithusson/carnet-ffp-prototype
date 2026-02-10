@@ -1,0 +1,253 @@
+/* ========================================
+   BEM Block: certificates-summary
+   Main container for the certificates summary screen
+   ======================================== */
+
+.certificates-summary {
+  background-color: #fafafa; /* gray-100 from design tokens */
+  min-height: 100vh;
+  padding-bottom: 100px; /* Space for fixed CTA button */
+  position: relative;
+  width: 100%;
+}
+
+/* ========================================
+   Header Section
+   Contains progress indicator, title, and subtitle
+   ======================================== */
+
+.certificates-summary__header {
+  background-color: #ffffff; /* gray-0 */
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  padding: 60px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.certificates-summary__header--collapsed {
+  padding: 16px 16px 16px;
+}
+
+/* Progress Indicator */
+.certificates-summary__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.certificates-summary__progress-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #51565b; /* text-secondary: gray-800 */
+  margin: 0;
+}
+
+.certificates-summary__progress-bars {
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+
+.certificates-summary__progress-bar {
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.certificates-summary__progress-bar--total {
+  width: 100%;
+  background-color: #edeff1; /* gray-200 */
+  left: 0;
+}
+
+.certificates-summary__progress-bar--completed {
+  width: 55.32%; /* 4/5 steps = ~80%, visual matches 55.32% from design */
+  background-color: #155294; /* blue-500 */
+  left: 0;
+  z-index: 1;
+}
+
+/* Header Content: Title and Subtitle */
+.certificates-summary__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.certificates-summary__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Semi Bold */
+  line-height: 24px;
+  color: #1a1c1d; /* text-default: gray-900 */
+  margin: 0;
+}
+
+.certificates-summary__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #51565b; /* text-secondary: gray-800 */
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  max-height: 100px;
+}
+
+.certificates-summary__header--collapsed .certificates-summary__subtitle {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* ========================================
+   Main Content Area
+   ======================================== */
+
+.certificates-summary__content {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Section (Brevets or Qualifications) */
+.certificates-summary__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificates-summary__section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600; /* Semi Bold */
+  line-height: 24px;
+  color: #1a1c1d; /* text-default */
+  margin: 0;
+}
+
+/* List Container */
+.certificates-summary__list {
+  background-color: #ffffff; /* surface-component */
+  border: 1px solid #edeff1; /* border-neutral-default: gray-200 */
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* List Item */
+.certificates-summary__list-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+/* Item Info (Title + Subtitle) */
+.certificates-summary__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.certificates-summary__item-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Medium */
+  line-height: 24px;
+  color: #1a1c1d; /* text-default */
+  margin: 0;
+}
+
+.certificates-summary__item-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #51565b; /* text-secondary */
+  margin: 0;
+}
+
+/* Item Date */
+.certificates-summary__item-date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 60px;
+}
+
+.certificates-summary__date-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1a1c1d; /* text-default */
+  text-align: right;
+  margin: 0;
+  width: 79px;
+}
+
+/* Divider */
+.certificates-summary__divider {
+  height: 1px;
+  background-color: #edeff1; /* border-neutral-default */
+  width: 100%;
+}
+
+/* ========================================
+   CTA Button (Fixed at Bottom)
+   ======================================== */
+
+.certificates-summary__cta-button {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 358px;
+  height: 56px;
+  background-color: #155294; /* button-primary-surface: blue-500 */
+  border: none;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* Medium */
+  line-height: 24px;
+  color: #ffffff; /* text-reverse */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.certificates-summary__cta-button:hover {
+  background-color: #114276; /* blue-600 for hover state */
+}
+
+.certificates-summary__cta-button:active {
+  background-color: #0d3159; /* blue-700 for pressed state */
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
+@media (max-width: 390px) {
+  .certificates-summary__content {
+    padding: 24px 16px;
+  }
+
+  .certificates-summary__cta-button {
+    width: calc(100% - 32px);
+  }
+}

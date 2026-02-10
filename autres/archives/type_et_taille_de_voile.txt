@@ -1,0 +1,67 @@
+# **TYPE ET TAILLE DE VOILE AUTORISEE**
+
+### **Taille et type de voile autorisée**
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2520-20399&t=xCPQYci3qJN3mMKx-1
+- Information: 
+    - When I click on each label in the list, I’m redirected to the corresponding page.
+    - If I click on Canopy Size, I go to the Canopy Size page.
+    - If I click on Canopy Type, I go to the Canopy Type page.
+    - If I click on Logbook Photo, I go to the Logbook Photo page.
+    - If I click on the Back button, I return to the previous page, which is Your Jumps.
+    - If I click on Validate without filling in any information, an error message appears under all fields.
+    - If one or two fields are filled but others are missing, display the error message only under the missing fields.
+    - For the design of the error message, use the link from the screen "Taille et type de voile autorisée avec message d'erreur"
+
+### **Taille et type de voile autorisée avec message d'erreur**
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2522-5515&t=xCPQYci3qJN3mMKx-1
+
+
+### **Taille de voile**
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2506-3604&t=xCPQYci3qJN3mMKx-1
+- Information: 
+    - If I click on Validate but the field is empty, display an error message.
+    - Spacing: 4px from the input field.
+    - The design of the error message is the same than for Taille et type de voile autorisée.
+    - I can validate once I gave a date.
+
+### **Type de voile**
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2506-5340&t=xCPQYci3qJN3mMKx-1
+- Information: 
+    - The sections by canopy type are sorted alphabetically, just like in WhatsApp.
+    - When I scroll down, the search bar disappears. It reappears when I scroll up.
+    - When I select an option, it is saved in memory unless it is deleted.
+    - When I select an option and click Validate, it is displayed on the previous page, Authorized Canopy Size and Type, under the corresponding label with the following styles:
+        - Color: #5A5F65
+        - Spacing: 8px
+        - Font size: 14px
+    - Once I selected an option, I can validate.
+
+- Information for the container with the letters: 
+    - On scroll, for each container containing the alphabet letters used to categorize the sections, when it reaches the header, it stays sticky just below it with a transparent background — just like in WhatsApp.
+    - The letter container then disappears when the next letter’s container reaches it: when the next letter’s container hits the bottom border of the previous one, the previous container is pushed upward under the header and disappears, while the new letter container takes its place.
+    - The slight box shadow on the bottom border is therefore hidden by the new letter container. 
+    - Use this link as an example: https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2520-21365&t=xCPQYci3qJN3mMKx-1
+
+- Information for the container with the selected options:
+    - When I select options, chips are displayed in the header below the search bar.
+    - The headers are displayed one after another. The list is horizontally scrollable.
+    - Spacing between all header elements: 8px.
+    - When I click the chip’s “Close icon”: it removes the tag and deselects the option in the list. The checkbox returns to an unchecked state.
+    - When I uncheck an option in the list, the corresponding chip is removed from the list.
+    - Use this link as an example: https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2520-21749&t=xCPQYci3qJN3mMKx-1
+
+
+### **Photo du carnet**
+https://www.figma.com/design/tgIdYqaDPkIU24TXabUcvo/Design?node-id=2506-4192&t=xCPQYci3qJN3mMKx-1
+- Information: 
+    - If I click “Validate” but haven’t added an image, an error message should be displayed like the previous ones.
+    - To add an image, I want to use the native iOS system when I click on “Upload.”
+    - Here, display the message between the photo upload input field and the information message, with 4px of spacing.
+    - If I click on the back arrow icon in the header, I go back to the previous page “Add a missing patent.”
+    - When I click on one of the images, I go to a preview page like on iOS.
+    - When I select one or more options and click “Validate,” they are displayed on the previous page “Add your missing patents” under the corresponding label with:
+        - Color: #5A5F65
+        - Spacing: 8px
+        - Font size: 14px
+        - Show the number of uploaded photos.
+    - I can click on Valider as soon as I added an image

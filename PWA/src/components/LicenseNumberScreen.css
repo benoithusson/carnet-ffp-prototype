@@ -1,0 +1,193 @@
+/**
+ * License Number Screen Styles
+ * BEM Convention: license-screen (Block)
+ */
+
+.license-screen {
+  background: var(--bg-page);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.license-screen__header {
+  background: var(--bg-page);
+  border-bottom: var(--border-width-sm) solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-11xl) var(--space-l) var(--space-l);
+  width: 100%;
+}
+
+.license-screen__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.license-screen__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-32);
+  color: var(--content-primary);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.license-screen__subtitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Content */
+.license-screen__content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 var(--space-l);
+}
+
+.license-screen__form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  width: 100%;
+}
+
+/* Input Wrapper */
+.license-screen__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.license-screen__label {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  display: flex;
+  gap: var(--space-s);
+}
+
+.license-screen__input-container {
+  position: relative;
+  width: 100%;
+}
+
+.license-screen__input {
+  border: var(--border-width-sm) solid var(--border-input);
+  background: transparent;
+  border-radius: var(--radius-lg);
+  padding: var(--space-m) var(--space-l);
+  height: 48px;
+  width: 100%;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-primary);
+  box-sizing: border-box;
+}
+
+.license-screen__input::placeholder {
+  color: var(--content-placeholder);
+}
+
+.license-screen__input:focus {
+  outline: none;
+  border-color: var(--border-interactive);
+}
+
+.license-screen__helper-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-secondary);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Forgot Password */
+.license-screen__forgot-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.license-screen__forgot-link {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-24);
+  color: var(--content-link);
+  text-decoration: underline;
+  padding-left: var(--space-2xl);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.license-screen__forgot-link:hover {
+  opacity: 0.8;
+}
+
+/* Button Container */
+.license-screen__button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--bg-page);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2xl) var(--space-l) var(--space-4xl);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.license-screen__button-primary {
+  background: var(--bg-brand);
+  display: flex;
+  gap: var(--space-s);
+  height: 56px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-l);
+  border-radius: var(--radius-3xl);
+  border: none;
+  width: 100%;
+  cursor: pointer;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-24);
+  color: var(--content-inverse);
+  text-align: center;
+}
+
+.license-screen__button-primary:hover {
+  opacity: 0.9;
+}
+
+.license-screen__button-primary:active {
+  transform: scale(0.98);
+}

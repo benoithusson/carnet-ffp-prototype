@@ -1,0 +1,324 @@
+/* BEM Block: logbook-photo-upload */
+.logbook-photo-upload {
+  background-color: #ffffff;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BEM Element: header-page */
+.logbook-photo-upload__header-page {
+  background-color: #ffffff;
+  border-bottom: 1px solid #edeff1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 16px 16px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logbook-photo-upload__header-container {
+  display: flex;
+  gap: 16px;
+  height: 32px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.logbook-photo-upload__header-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1a1c1d;
+  text-align: center;
+}
+
+.logbook-photo-upload__header-title p {
+  margin: 0;
+}
+
+.logbook-photo-upload__header-back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logbook-photo-upload__header-back-button svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* BEM Element: input-section */
+.logbook-photo-upload__input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  padding: 0 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logbook-photo-upload__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+}
+
+.logbook-photo-upload__input-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+.logbook-photo-upload__input-label p {
+  margin: 0;
+}
+
+/* Upload Area */
+.logbook-photo-upload__upload-area {
+  border: 2px dashed #5a5f65;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  height: 132px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logbook-photo-upload__upload-area:hover {
+  border-color: #155294;
+  background-color: #fafafa;
+}
+
+/* BEM Modifier: upload-area--error */
+.logbook-photo-upload__upload-area--error {
+  border-color: #ba0808;
+}
+
+.logbook-photo-upload__upload-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.logbook-photo-upload__upload-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #5a5f65;
+  text-align: center;
+}
+
+.logbook-photo-upload__upload-text p {
+  margin: 0;
+}
+
+/* Error Message */
+.logbook-photo-upload__error-message {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  margin-left: 16px;
+}
+
+.logbook-photo-upload__error-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.logbook-photo-upload__error-text {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ba0808;
+}
+
+.logbook-photo-upload__error-text p {
+  margin: 0;
+}
+
+/* Info Message */
+.logbook-photo-upload__info-message {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 4px;
+}
+
+.logbook-photo-upload__info-message p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a5f65;
+  margin: 0;
+}
+
+/* BEM Element: photos-container */
+.logbook-photo-upload__photos-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 0 16px;
+  overflow-x: auto;
+  margin-top: 32px;
+  position: absolute;
+  bottom: 180px;
+  left: 0;
+  right: 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.logbook-photo-upload__photos-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Photo Item */
+.logbook-photo-upload__photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logbook-photo-upload__photo-thumbnail {
+  border: 1px solid #edeff1;
+  border-radius: 8px;
+  height: 118px;
+  width: 142px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logbook-photo-upload__photo-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.logbook-photo-upload__photo-delete {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.logbook-photo-upload__delete-icon {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.logbook-photo-upload__delete-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+.logbook-photo-upload__delete-label p {
+  margin: 0;
+}
+
+/* BEM Element: button-container */
+.logbook-photo-upload__button-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* BEM Element: button */
+.logbook-photo-upload__button {
+  height: 56px;
+  min-height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  width: 100%;
+  max-width: 358px;
+  margin: 0 auto;
+}
+
+.logbook-photo-upload__button:active {
+  opacity: 0.7;
+}
+
+/* BEM Modifier: button--primary */
+.logbook-photo-upload__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}

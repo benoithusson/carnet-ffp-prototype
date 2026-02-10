@@ -1,0 +1,253 @@
+/**
+ * AddMissingCertificateScreen Styles
+ *
+ * BEM Convention:
+ * Block: add-certificate
+ * Elements: __header, __close-icon, __form, __list-item, __divider, __button
+ * Modifiers: --primary
+ */
+
+/* Block: add-certificate */
+.add-certificate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  border-radius: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Element: Header Section */
+.add-certificate__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 16px 16px 16px;
+  background-color: #ffffff;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  width: 100%;
+}
+
+.add-certificate__header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+}
+
+.add-certificate__title {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+.add-certificate__close-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #1a1c1d;
+  transition: opacity 0.2s ease;
+}
+
+.add-certificate__close-icon:hover {
+  opacity: 0.7;
+}
+
+.add-certificate__close-icon:active {
+  opacity: 0.5;
+}
+
+/* Element: Form Section */
+.add-certificate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px;
+  flex: 1;
+}
+
+.add-certificate__field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 60px;
+  justify-content: center;
+}
+
+.add-certificate__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 0;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.add-certificate__list-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.add-certificate__list-item:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.add-certificate__list-label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.add-certificate__list-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  text-align: left;
+}
+
+.add-certificate__list-value {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #51565b;
+  text-align: left;
+}
+
+.add-certificate__chevron {
+  width: 24px;
+  height: 24px;
+  color: #1a1c1d;
+  flex-shrink: 0;
+}
+
+/* Element: Divider */
+.add-certificate__divider {
+  width: 100%;
+  height: 1px;
+  background-color: #edeff1;
+}
+
+/* Element: Error Message */
+.add-certificate__error-message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  animation: fadeInError 0.3s ease;
+}
+
+@keyframes fadeInError {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-certificate__error-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #ba0808;
+}
+
+.add-certificate__error-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ba0808;
+  flex: 1;
+}
+
+/* Element: Bottom Container */
+.add-certificate__bottom-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 16px;
+  background-color: #ffffff;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+}
+
+/* Element: Button */
+.add-certificate__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  min-height: 56px;
+  height: 56px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Modifier: Primary Button */
+.add-certificate__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
+
+.add-certificate__button--primary:hover {
+  background-color: #0d3d6f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.3);
+}
+
+.add-certificate__button--primary:active {
+  background-color: #0a2f54;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(21, 82, 148, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .add-certificate__header {
+    padding: 40px 12px 12px 12px;
+  }
+
+  .add-certificate__form {
+    padding: 16px 12px;
+  }
+
+  .add-certificate__bottom-container {
+    padding: 16px 12px;
+  }
+}

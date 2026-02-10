@@ -1,0 +1,349 @@
+/**
+ * FFPLoginScreen.css - Styling for the FFP Login Screen Component
+ *
+ * BEM Convention:
+ * - Block: .ffp-login
+ * - Elements: .ffp-login__*
+ * - Modifiers: .ffp-login__button--primary, .ffp-login__progress-bar--completed
+ */
+
+/* Block: ffp-login */
+.ffp-login {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Element: ffp-login__refresh-indicator */
+.ffp-login__refresh-indicator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: opacity 0.2s ease;
+}
+
+/* Element: ffp-login__refresh-spinner */
+.ffp-login__refresh-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #edeff1;
+  border-top-color: #155294;
+  border-radius: 50%;
+  animation: spin-login 1s linear infinite;
+}
+
+@keyframes spin-login {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Element: ffp-login__header-section */
+.ffp-login__header-section {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px 16px;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 50;
+  width: 100%;
+  max-width: 390px;
+  transition: padding 0.3s ease;
+}
+
+/* Modifier: ffp-login__header-section--scrolled */
+.ffp-login__header-section--scrolled {
+  padding: 24px 16px 16px;
+}
+
+/* Element: ffp-login__progress-container */
+.ffp-login__progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Element: ffp-login__step-text */
+.ffp-login__step-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+}
+
+/* Element: ffp-login__progress-bar */
+.ffp-login__progress-bar {
+  position: relative;
+  height: 7px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Element: ffp-login__progress-bar-remaining */
+.ffp-login__progress-bar-remaining {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #edeff1;
+  border-radius: 4px;
+}
+
+/* Element: ffp-login__progress-bar-completed */
+.ffp-login__progress-bar-completed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #155294;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Element: ffp-login__header */
+.ffp-login__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: ffp-login__content */
+.ffp-login__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 200px 16px 120px;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Element: ffp-login__form-container */
+.ffp-login__form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Element: ffp-login__input-group */
+.ffp-login__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+/* Element: ffp-login__label */
+.ffp-login__label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+/* Element: ffp-login__input-wrapper */
+.ffp-login__input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Element: ffp-login__input */
+.ffp-login__input {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #51565b;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.ffp-login__input::placeholder {
+  color: #b0b5bb;
+}
+
+.ffp-login__input:focus {
+  outline: none;
+  border-color: #155294;
+}
+
+/* Modifier: ffp-login__input--password */
+.ffp-login__input--password {
+  padding-right: 80px;
+}
+
+/* Element: ffp-login__toggle-password */
+.ffp-login__toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Element: ffp-login__helper-text */
+.ffp-login__helper-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 4px 0 0 0;
+  max-height: 200px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* Modifier: ffp-login__helper-text--hidden */
+.ffp-login__helper-text--hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+/* Element: ffp-login__forgot-password */
+.ffp-login__forgot-password {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #155294;
+  text-align: right;
+  cursor: pointer;
+  padding: 4px 0;
+  align-self: flex-end;
+  transition: opacity 0.2s ease;
+}
+
+.ffp-login__forgot-password:hover {
+  opacity: 0.8;
+}
+
+/* Element: ffp-login__bottom-nav */
+.ffp-login__bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 390px;
+  z-index: 50;
+}
+
+/* Element: ffp-login__button (Base) */
+.ffp-login__button {
+  flex: 1;
+  height: 56px;
+  min-height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modifier: ffp-login__button--secondary */
+.ffp-login__button--secondary {
+  background-color: #ffffff;
+  border: 2px solid #155294;
+  color: #1a1c1d;
+}
+
+.ffp-login__button--secondary:hover {
+  background-color: #f5f8fb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.15);
+}
+
+.ffp-login__button--secondary:active {
+  transform: translateY(0);
+}
+
+/* Modifier: ffp-login__button--primary */
+.ffp-login__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
+
+.ffp-login__button--primary:hover:not(:disabled) {
+  background-color: #0f3d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.3);
+}
+
+.ffp-login__button--primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ffp-login__button--primary:disabled {
+  background-color: #b0b5bb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .ffp-login__header {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}

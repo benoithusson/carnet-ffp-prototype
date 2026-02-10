@@ -1,0 +1,9 @@
+{
+  "short_name": "Brevets",
+  "name": "Vos brevets et qualifications",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFFFFF",
+  "background_color": "#fafafa"
+}

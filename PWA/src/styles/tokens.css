@@ -1,0 +1,73 @@
+/**
+ * Design System Tokens
+ * Using the existing token structure from /src/styles
+ */
+
+:root {
+  /* Brand Colors */
+  --color-brand-500: #155294;
+  --color-brand-200: #b2c6db;
+
+  /* Success Colors */
+  --color-success-500: #007A00;
+  --color-success-100: #E6F4E6;
+
+  /* Gray Scale */
+  --color-gray-0: #ffffff;
+  --color-gray-100: #f6f6f6;
+  --color-gray-200: #eaecee;
+  --color-gray-400: #ccd2d9;
+  --color-gray-600: #828990;
+  --color-gray-700: #5d6166;
+  --color-gray-800: #4d5156;
+  --color-gray-900: #191a1b;
+
+  /* Spacing */
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-l: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-4xl: 32px;
+  --space-6xl: 40px;
+  --space-11xl: 60px;
+
+  /* Typography */
+  --font-family-primary: "Be Vietnam Pro", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+
+  --line-height-24: 24px;
+  --line-height-32: 32px;
+
+  /* Border Radius */
+  --radius-lg: 16px;
+  --radius-3xl: 48px;
+  --radius-full: 9999px;
+
+  /* Border Widths */
+  --border-width-sm: 1px;
+  --border-width-md: 1.5px;
+  --border-width-xl: 4px;
+
+  /* Semantic Colors */
+  --bg-page: var(--color-gray-0);
+  --bg-brand: var(--color-brand-500);
+
+  --content-primary: var(--color-gray-900);
+  --content-secondary: var(--color-gray-800);
+  --content-placeholder: var(--color-gray-700);
+  --content-inverse: var(--color-gray-0);
+  --content-link: var(--color-brand-500);
+
+  --border-subtle: var(--color-gray-200);
+  --border-input: var(--color-gray-600);
+  --border-interactive: var(--color-gray-600);
+}

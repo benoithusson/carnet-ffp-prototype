@@ -1,0 +1,368 @@
+/* BEM Block: canopy-type */
+.canopy-type {
+  background-color: #fafafa;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BEM Element: header-page */
+.canopy-type__header-page {
+  background-color: #ffffff;
+  border-bottom: 1px solid #edeff1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  padding: 60px 16px 8px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.canopy-type__header-container {
+  display: flex;
+  gap: 16px;
+  height: 32px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.canopy-type__header-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1a1c1d;
+  text-align: center;
+}
+
+.canopy-type__header-title p {
+  margin: 0;
+}
+
+.canopy-type__header-back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.canopy-type__header-back-button svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Search Bar - with slide animation */
+.canopy-type__searchbar-container {
+  width: 100%;
+  max-height: 48px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+  opacity: 1;
+}
+
+.canopy-type__searchbar-container--hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0 !important;
+}
+
+.canopy-type__searchbar-container--visible {
+  max-height: 48px;
+  opacity: 1;
+}
+
+.canopy-type__searchbar {
+  background-color: #edeff1;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  height: 48px;
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.canopy-type__searchbar-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.canopy-type__searchbar-input {
+  flex: 1;
+  height: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1a1c1d;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.canopy-type__searchbar-input::placeholder {
+  color: #5a5f65;
+}
+
+/* Chips Container - horizontally scrollable */
+.canopy-type__chips-container {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.canopy-type__chips-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.canopy-type__chip {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background-color: #b0b5bb;
+  border-radius: 48px;
+  padding: 10px 12px;
+  height: 44px;
+  flex-shrink: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1a1c1d;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.canopy-type__chip-close {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* BEM Element: list-container - Scrollable */
+.canopy-type__list-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 16px 120px 16px; /* 24px spacing from header, 120px bottom for button */
+}
+
+.canopy-type__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 32px;
+}
+
+/* BEM Element: section */
+.canopy-type__section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Letter Container - Sticky with gray background when stuck */
+.canopy-type__letter-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 16px;
+  position: sticky;
+  top: 108px; /* 60px top padding + 32px header + 8px gap + 8px bottom padding */
+  z-index: 10;
+  background-color: #fafafa;
+  margin: 0 -16px;
+  padding-left: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.canopy-type__letter {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a5f65;
+}
+
+.canopy-type__letter p {
+  margin: 0;
+}
+
+/* Items Container */
+.canopy-type__items-container {
+  background-color: #ffffff;
+  border: 1px solid #edeff1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+/* List Item */
+.canopy-type__list-item {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.canopy-type__list-item-content {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.canopy-type__list-item-logo {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.canopy-type__list-item-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.canopy-type__list-item-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+.canopy-type__list-item-label p {
+  margin: 0;
+}
+
+.canopy-type__list-item-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a5f65;
+}
+
+.canopy-type__list-item-subtitle p {
+  margin: 0;
+}
+
+/* BEM Modifier: list-item-label--selected */
+.canopy-type__list-item-label--selected {
+  font-weight: 600;
+}
+
+/* Checkbox */
+.canopy-type__checkbox {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canopy-type__checkbox-box {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #5a5f65;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* BEM Modifier: checkbox-box--checked */
+.canopy-type__checkbox-box--checked {
+  background-color: #1a1c1d;
+  border-color: #1a1c1d;
+}
+
+/* Divider */
+.canopy-type__divider {
+  height: 1px;
+  background-color: #edeff1;
+  width: 100%;
+}
+
+/* BEM Element: button-container */
+.canopy-type__button-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* BEM Element: button */
+.canopy-type__button {
+  height: 56px;
+  min-height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  width: 100%;
+  max-width: 358px;
+  margin: 0 auto;
+}
+
+.canopy-type__button:active:not(:disabled) {
+  opacity: 0.7;
+}
+
+.canopy-type__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* BEM Modifier: button--primary */
+.canopy-type__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}

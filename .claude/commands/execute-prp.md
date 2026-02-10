@@ -1,40 +1,84 @@
-# Execute BASE PRP
+---
+description: Execute the design implementation workflow from Figma links
+---
 
-Implement a feature using using the PRP file.
+# INSTRUCTIONS FOR DESIGN EXECUTION
 
-## PRP File: $ARGUMENTS
+## FIGMA LINK INPUT
+Figma Link: $ARGUMENTS
 
-## Execution Process
+---
 
-1. **Load PRP**
-   - Read the specified PRP file
-   - Understand all context and requirements
-   - Follow all instructions in the PRP and extend the research if needed
-   - Ensure you have all needed context to implement the PRP fully
-   - Do more web searches and codebase exploration as needed
+## 📋 AUTOMATED WORKFLOW
 
-2. **ULTRATHINK**
-   - Think hard before you execute the plan. Create a comprehensive plan addressing all requirements.
-   - Break down complex tasks into smaller, manageable steps using your todos tools.
-   - Use the TodoWrite tool to create and track your implementation plan.
-   - Identify implementation patterns from existing code to follow.
+### 1. LOAD PROJECT CONTEXT
+**Action**: Read and integrate all project conventions and constraints
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/context.md`
+- **Purpose**: Understand your role, tech stack, project structure, and constraints
 
-3. **Execute the plan**
-   - Execute the PRP
-   - Implement all the code
+### 2. LOAD DESIGN GUIDELINES
+**Action**: Read component behavior and interaction guidelines
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/design/guidelines-components.md`
+- **Purpose**: Understand input behaviors, header rules, CTA positioning, etc.
 
-4. **Validate**
-   - Run each validation command
-   - Fix any failures
-   - Re-run until all pass
+### 3. PROCESS FIGMA LINK
+**Action**: Handle the Figma link provided in arguments
 
-5. **Complete**
-   - Ensure all checklist items done
-   - Run final validation suite
-   - Report completion status
-   - Read the PRP again to ensure you have implemented everything
+**If a new Figma link is provided**:
+- Add it to `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md` following the existing format:
+  ```markdown
+  ### [Screen Number] - [Screen Name]
+  [Figma URL]
+  ```
+- Extract the screen name from the Figma file or ask the user
+- Assign the next sequential number
 
-6. **Reference the PRP**
-   - You can always reference the PRP again if needed
+**If no link in arguments**:
+- Read from `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md` and pick the first non-DONE item
 
-Note: If validation fails, use error patterns in PRP to fix and retry.
+**Important**: Only implement the screen content, not the gray wrapper or post-it notes around it
+
+### 4. CHECK EXISTING STYLES
+**Action**: Review existing CSS to reuse classes and maintain consistency
+- **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/PWA/src/styles/main.css`
+
+### 5. BUILD THE COMPONENT
+**Action**: Generate React component with BEM CSS
+- Use ReactJS (no Vite, no Tailwind)
+- Follow BEM naming convention strictly
+- Add the component to existing PWA folder structure
+- Reuse existing components when possible
+- Include dummy data
+- Add smooth animations where appropriate
+
+### 6. UPDATE MAIN MENU
+**Action**: Add a link to the new screen in the main menu page
+- Ensure navigation is working
+
+### 7. MARK AS COMPLETE
+**Action**: Update progress tracking
+- Add "- DONE" after the Figma link in `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp-2/figma-links.md`
+- Example: `# 04 - Numéro de licence FFP - DONE`
+
+### 8. VALIDATION CHECKLIST
+**Action**: Display completion summary
+- Generate a checklist with: `[✅] Task name and outcome`
+- Include title: **Action Summary**
+
+---
+
+## 🎯 OUTPUT REQUIREMENTS
+- React component (JSX) with proper BEM structure
+- Vanilla CSS in separate file
+- Comments explaining BEM structure and dummy data usage
+- Component added to existing project (not a new project)
+- Main menu updated with link to new screen
+
+---
+
+## ⚠️ IMPORTANT REMINDERS
+- Don't duplicate existing screens
+- Only implement screen content (no Figma UI elements)
+- Follow KISS principle (Keep It Simple, Stupid)
+- Code like a junior frontend developer would
+- No backend, no external APIs - dummy data only

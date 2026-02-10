@@ -1,0 +1,341 @@
+/**
+ * SelectCertificateScreen Styles
+ *
+ * BEM Structure:
+ * Block: select-certificate
+ * Elements: __header, __header-top, __back-button, __title, __subtitle,
+ *           __searchbar, __search-icon, __search-input, __list, __item,
+ *           __item-content, __item-title, __item-description, __radio,
+ *           __radio-outer, __radio-inner, __divider, __button-container, __button
+ * Modifiers: --selected, --disabled
+ */
+
+/* Block: Main container */
+.select-certificate {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 48px;
+}
+
+/* Element: Header section */
+.select-certificate__header {
+  background-color: #ffffff;
+  padding: 24px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: padding 0.3s ease;
+}
+
+/* Modifier: select-certificate__header--scrolled */
+.select-certificate__header--scrolled {
+  padding: 24px 16px 16px 16px;
+}
+
+/* Element: Header top section with back button and title */
+.select-certificate__header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 32px;
+  position: relative;
+}
+
+/* Element: Back button */
+.select-certificate__back-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #1a1c1d;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease;
+}
+
+.select-certificate__back-button:hover {
+  opacity: 0.7;
+}
+
+.select-certificate__back-button:active {
+  opacity: 0.5;
+}
+
+/* Element: Title */
+.select-certificate__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1a1c1d;
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+/* Element: Subtitle */
+.select-certificate__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #51565b;
+  text-align: center;
+  margin: 0;
+  max-height: 24px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* Modifier: select-certificate__subtitle--hidden */
+.select-certificate__subtitle--hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+/* Element: Search bar */
+.select-certificate__searchbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #edeff1;
+  border-radius: 8px;
+  padding: 12px 16px;
+  height: 48px;
+  max-height: 48px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* Modifier: select-certificate__searchbar--hidden */
+.select-certificate__searchbar--hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0 16px;
+}
+
+/* Element: Search icon */
+.select-certificate__search-icon {
+  width: 24px;
+  height: 24px;
+  color: #51565b;
+  flex-shrink: 0;
+}
+
+/* Element: Search input */
+.select-certificate__search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+.select-certificate__search-input::placeholder {
+  color: #51565b;
+}
+
+/* Element: List container */
+.select-certificate__list {
+  flex: 1;
+  padding: 24px 0 16px 0;
+  overflow-y: auto;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+/* Element: List item */
+.select-certificate__item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 16px;
+}
+
+.select-certificate__item:hover {
+  background-color: rgba(237, 239, 241, 0.3);
+}
+
+.select-certificate__item:active {
+  background-color: rgba(237, 239, 241, 0.6);
+}
+
+/* Element: Item content */
+.select-certificate__item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Element: Item title */
+.select-certificate__item-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  margin: 0;
+  transition: font-weight 0.2s ease;
+}
+
+/* Modifier: Selected item title */
+.select-certificate__item-title--selected {
+  font-weight: 600;
+}
+
+/* Element: Item description */
+.select-certificate__item-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+}
+
+/* Element: Radio button */
+.select-certificate__radio {
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Element: Radio outer circle */
+.select-certificate__radio-outer {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #51565b;
+  display: block;
+  transition: border-color 0.2s ease, border-width 0.2s ease;
+}
+
+.select-certificate__radio--selected .select-certificate__radio-outer {
+  border-color: #1a1c1d;
+  border-width: 2px;
+}
+
+/* Element: Radio inner circle */
+.select-certificate__radio-inner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #1a1c1d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: radioAppear 0.2s ease;
+}
+
+@keyframes radioAppear {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Element: Divider */
+.select-certificate__divider {
+  height: 1px;
+  background-color: #edeff1;
+  width: 100%;
+  margin: 0;
+}
+
+/* Element: Button container */
+.select-certificate__button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 24px 16px;
+  box-shadow: 0px -3px 20px 0px rgba(26, 28, 29, 0.08);
+}
+
+/* Element: Validate button */
+.select-certificate__button {
+  width: 100%;
+  display: block;
+  height: 56px;
+  min-height: 56px;
+  background-color: #155294;
+  color: #ffffff;
+  border: none;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-certificate__button:hover {
+  background-color: #1a65b5;
+}
+
+.select-certificate__button:active {
+  background-color: #104078;
+  transform: scale(0.98);
+}
+
+/* Modifier: Disabled button */
+.select-certificate__button--disabled {
+  background-color: #c1c7cd;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.select-certificate__button--disabled:hover {
+  background-color: #c1c7cd;
+  transform: none;
+}
+
+.select-certificate__button--disabled:active {
+  background-color: #c1c7cd;
+  transform: none;
+}

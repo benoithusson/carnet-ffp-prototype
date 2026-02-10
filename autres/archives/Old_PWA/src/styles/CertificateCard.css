@@ -1,0 +1,83 @@
+/**
+ * CertificateCard.css - Styling for the Certificate Card Component
+ *
+ * BEM Convention:
+ * - Block: .certificate-card
+ * - Elements: .certificate-card__*
+ */
+
+/* Block: certificate-card */
+.certificate-card {
+  background-color: #ffffff;
+  border-top: 1px solid #edeff1;
+  border-bottom: 1px solid #edeff1;
+  width: 100%;
+  max-width: 390px;
+}
+
+/* Element: certificate-card__content */
+.certificate-card__content {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+/* Element: certificate-card__info */
+.certificate-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-height: 80px;
+  justify-content: flex-start;
+}
+
+/* Element: certificate-card__title */
+.certificate-card__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: certificate-card__subtitle */
+.certificate-card__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+}
+
+/* Element: certificate-card__menu-button */
+.certificate-card__menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+}
+
+.certificate-card__menu-button:hover {
+  opacity: 0.7;
+}
+
+.certificate-card__menu-button:active {
+  opacity: 0.5;
+}
+
+/* Element: certificate-card__menu-icon */
+.certificate-card__menu-icon {
+  width: 24px;
+  height: 24px;
+  color: #1a1c1d;
+}

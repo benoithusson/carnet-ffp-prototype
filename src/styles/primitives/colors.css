@@ -1,0 +1,94 @@
+/**
+ * Primitive Colors
+ * Base color palette - use these as building blocks
+ */
+
+:root {
+  /* Brand Colors */
+  --color-brand-50: #f5f9fe;
+  --color-brand-100: #e6ecf3;
+  --color-brand-200: #b2c6db;
+  --color-brand-300: #7397bf;
+  --color-brand-400: #4475a9;
+  --color-brand-500: #155294;
+  --color-brand-600: #114276;
+  --color-brand-700: #0d3159;
+  --color-brand-800: #08213b;
+  --color-brand-900: #030d19;
+
+  /* Green Colors */
+  --color-green-100: #d8f5d8;
+  --color-green-200: #b2ecb2;
+  --color-green-300: #8ce38c;
+  --color-green-400: #66d966;
+  --color-green-500: #007a00;
+  --color-green-600: #016401;
+  --color-green-700: #014b01;
+  --color-green-800: #013501;
+  --color-green-900: #002000;
+
+  /* Orange Colors */
+  --color-orange-100: #ffe6c7;
+  --color-orange-200: #ffdeb6;
+  --color-orange-300: #ffc693;
+  --color-orange-400: #ff8d09;
+  --color-orange-500: #b34b06;
+  --color-orange-600: #8a3800;
+  --color-orange-700: #6a2d00;
+  --color-orange-800: #4a2100;
+  --color-orange-900: #2a1600;
+
+  /* Red Colors */
+  --color-red-100: #f8eaea;
+  --color-red-200: #e7baba;
+  --color-red-300: #da6b6b;
+  --color-red-400: #ce3939;
+  --color-red-500: #ba0808;
+  --color-red-600: #9b0606;
+  --color-red-700: #740505;
+  --color-red-800: #4e0303;
+  --color-red-900: #270202;
+
+  /* Gray Scale */
+  --color-gray-0: #ffffff;
+  --color-gray-50: rgba(23, 24, 25, 0.55);
+  --color-gray-80: rgba(23, 24, 25, 0.85);
+  --color-gray-100: #f6f6f6;
+  --color-gray-200: #eaecee;
+  --color-gray-300: #dce2e9;
+  --color-gray-400: #ccd2d9;
+  --color-gray-500: #b0b5bb;
+  --color-gray-600: #828990;
+  --color-gray-700: #5d6166;
+  --color-gray-800: #4d5156;
+  --color-gray-900: #191a1b;
+
+  /* UI Accent Colors */
+  --color-ui-purple-default: #9747ff;
+  --color-ui-purple-light: #f8f3ff;
+  --color-ui-purple-dark: #1f0640;
+
+  --color-ui-cyan-light: #9cccff;
+
+  --color-ui-mint-light: #97eecc;
+  --color-ui-mint-dark: #08432b;
+
+  --color-ui-corail-light: #f3ada0;
+  --color-ui-corail-dark: #3b120a;
+
+  --color-ui-yellow-light: #f8dd74;
+  --color-ui-yellow-dark: #3d3207;
+
+  --color-ui-pink-light: #f8f3ff;
+  --color-ui-pink-dark: #5c0736;
+
+  --color-ui-petrol-light: #6a9ba7;
+  --color-ui-petrol-dark: #093039;
+
+  /* External Service Colors */
+  --color-google-blue: #4285f4;
+  --color-google-green: #34a853;
+  --color-google-orange: #eb4335;
+  --color-google-yellow: #fbbc05;
+  --color-facebook-blue: #1a72eb;
+}

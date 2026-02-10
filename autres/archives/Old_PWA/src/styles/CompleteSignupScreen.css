@@ -1,0 +1,392 @@
+/**
+ * CompleteSignupScreen.css - Styling for the Complete Signup Screen Component
+ *
+ * BEM Convention:
+ * - Block: .complete-signup
+ * - Elements: .complete-signup__*
+ * - Modifiers: .complete-signup__button--primary, .complete-signup__badge--valid
+ */
+
+/* Block: complete-signup */
+.complete-signup {
+  background-color: #ffffff;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Element: complete-signup__refresh-indicator */
+.complete-signup__refresh-indicator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: opacity 0.2s ease;
+}
+
+/* Element: complete-signup__refresh-spinner */
+.complete-signup__refresh-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #edeff1;
+  border-top-color: #155294;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Element: complete-signup__content */
+.complete-signup__content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  padding-top: calc(24px + 32px + 24px + 8px);
+  padding-bottom: 80px;
+  transition: transform 0.2s ease;
+  overflow-y: visible;
+}
+
+/* Element: complete-signup__scrollable-content */
+.complete-signup__scrollable-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Element: complete-signup__header-section */
+.complete-signup__header-section {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 24px 16px 16px;
+  box-shadow: -3px 0px 20px 0px rgba(26, 28, 29, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 50;
+  width: 100%;
+  max-width: 390px;
+}
+
+/* Element: complete-signup__header */
+.complete-signup__header {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+/* Element: complete-signup__subtitle */
+.complete-signup__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 0;
+}
+
+/* Element: complete-signup__photo-container */
+.complete-signup__photo-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 56px auto 0;
+}
+
+/* Element: complete-signup__photo */
+.complete-signup__photo {
+  width: 101px;
+  height: 101px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Element: complete-signup__photo-placeholder */
+.complete-signup__photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #edeff1;
+  border-radius: 50%;
+}
+
+/* Element: complete-signup__photo-button */
+.complete-signup__photo-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0px 5px 10px 0px rgba(16, 18, 20, 0.1);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1a1c1d;
+  transition: all 0.2s ease;
+}
+
+.complete-signup__photo-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0px 7px 15px 0px rgba(16, 18, 20, 0.15);
+}
+
+/* Element: complete-signup__camera-icon */
+.complete-signup__camera-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Element: complete-signup__form */
+.complete-signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Element: complete-signup__input-group */
+.complete-signup__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+/* Element: complete-signup__label */
+.complete-signup__label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+/* Element: complete-signup__input */
+.complete-signup__input {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #51565b;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.complete-signup__input::placeholder {
+  color: #b0b5bb;
+}
+
+.complete-signup__input:focus {
+  outline: none;
+  border-color: #155294;
+}
+
+/* Modifier: complete-signup__input--error */
+.complete-signup__input--error {
+  border-color: #c1121f;
+}
+
+/* Element: complete-signup__error-message */
+.complete-signup__error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Element: complete-signup__error-text */
+.complete-signup__error-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #c1121f;
+}
+
+/* Element: complete-signup__input-wrapper */
+.complete-signup__input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.complete-signup__input--password {
+  padding-right: 80px;
+}
+
+/* Element: complete-signup__unit */
+.complete-signup__unit {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+/* Element: complete-signup__toggle-password */
+.complete-signup__toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1c1d;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Element: complete-signup__helper-text */
+.complete-signup__helper-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  margin: 4px 0 0 0;
+}
+
+/* Element: complete-signup__password-section */
+.complete-signup__password-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Element: complete-signup__password-badges */
+.complete-signup__password-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Element: complete-signup__badge */
+.complete-signup__badge {
+  background-color: #edeff1;
+  padding: 2px 12px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #51565b;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+/* Modifier: complete-signup__badge--valid */
+.complete-signup__badge--valid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Add check icon to validated badges */
+.complete-signup__badge--valid::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #155724;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4L6 11.5L2.5 8' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M13.5 4L6 11.5L2.5 8' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  flex-shrink: 0;
+}
+
+/* Element: complete-signup__button (Base) */
+.complete-signup__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+}
+
+/* Modifier: complete-signup__button--primary */
+.complete-signup__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
+
+.complete-signup__button--primary:hover {
+  background-color: #0f3d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 82, 148, 0.3);
+}
+
+.complete-signup__button--primary:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+  .complete-signup__header {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

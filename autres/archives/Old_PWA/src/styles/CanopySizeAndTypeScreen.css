@@ -1,0 +1,268 @@
+/* BEM Block: canopy-size-and-type */
+.canopy-size-and-type {
+  background-color: #ffffff;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BEM Element: content */
+.canopy-size-and-type__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+/* BEM Element: header-section - HeaderProgressIndicator */
+.canopy-size-and-type__header-section {
+  background-color: #ffffff;
+  border-bottom: 1px solid #edeff1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  padding: 60px 16px 16px 16px;
+}
+
+/* Progress Indicator */
+.canopy-size-and-type__progress-indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.canopy-size-and-type__progress-step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.canopy-size-and-type__progress-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a5f65;
+  margin: 0;
+}
+
+.canopy-size-and-type__progress-bars {
+  position: relative;
+  width: 100%;
+  height: 7px;
+}
+
+.canopy-size-and-type__progress-bar {
+  position: absolute;
+  height: 7px;
+  border-radius: 4px;
+}
+
+.canopy-size-and-type__progress-bar--remaining {
+  width: 100%;
+  background-color: #edeff1;
+}
+
+.canopy-size-and-type__progress-bar--completed {
+  width: 55.32%;
+  background-color: #155294;
+}
+
+/* Header Content */
+.canopy-size-and-type__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.canopy-size-and-type__header-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1a1c1d;
+}
+
+.canopy-size-and-type__header-title p {
+  margin: 0;
+}
+
+.canopy-size-and-type__header-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a5f65;
+}
+
+.canopy-size-and-type__header-subtitle p {
+  margin: 0;
+}
+
+/* BEM Element: list - Liste des filtres */
+.canopy-size-and-type__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px;
+  border-radius: 8px;
+}
+
+/* BEM Element: list-item */
+.canopy-size-and-type__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+  cursor: pointer;
+}
+
+.canopy-size-and-type__list-item-content {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.canopy-size-and-type__list-item-text {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.canopy-size-and-type__list-item-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.canopy-size-and-type__list-item-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.canopy-size-and-type__list-item-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1a1c1d;
+  margin: 0;
+}
+
+.canopy-size-and-type__list-item-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a5f65;
+  margin: 0;
+}
+
+.canopy-size-and-type__list-item-chevron {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Error Message */
+.canopy-size-and-type__error-message {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.canopy-size-and-type__error-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.canopy-size-and-type__error-text {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ba0808;
+}
+
+.canopy-size-and-type__error-text p {
+  margin: 0;
+}
+
+/* Divider */
+.canopy-size-and-type__divider {
+  height: 1px;
+  background-color: #edeff1;
+  width: 100%;
+}
+
+/* BEM Element: button-container */
+.canopy-size-and-type__button-container {
+  background-color: #ffffff;
+  display: flex;
+  gap: 16px;
+  padding: 32px 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* BEM Element: button */
+.canopy-size-and-type__button {
+  flex: 1;
+  height: 56px;
+  min-height: 56px;
+  padding: 16px;
+  border-radius: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.canopy-size-and-type__button:active {
+  opacity: 0.7;
+}
+
+/* BEM Modifier: button--secondary */
+.canopy-size-and-type__button--secondary {
+  background-color: #ffffff;
+  border: 2px solid #155294;
+  color: #1a1c1d;
+}
+
+/* BEM Modifier: button--primary */
+.canopy-size-and-type__button--primary {
+  background-color: #155294;
+  color: #ffffff;
+}
