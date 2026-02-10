@@ -58,11 +58,16 @@ Figma Link: $ARGUMENTS
 ### 7. UPDATE DESIGN SYSTEM
 **Action**: Add new components to the design system documentation
 - **File**: `/Users/benoitthiennard/Desktop/Disque/Code/carnet-ffp/design-system.html`
-- Add each new reusable component created in this screen
-- Include component name, description, and a visual example
-- Show the HTML/JSX code snippet
-- Display the component's BEM CSS classes
-- Only add truly reusable components (buttons, inputs, cards, etc.), not full page layouts
+- **IMPORTANT**: First read the existing design-system.html to see what components already exist
+- Only add NEW reusable components that don't already exist in the design system
+- For each NEW component, add:
+  - Component name and description
+  - Visual example (rendered HTML)
+  - HTML/JSX code snippet
+  - BEM CSS classes used
+  - Mark clearly as "NEW" or add a timestamp
+- Only add truly reusable components (buttons, inputs, cards, headers, etc.), not full page layouts
+- If a similar component already exists, mention it in your validation checklist but don't duplicate it
 
 ### 8. MARK AS COMPLETE
 **Action**: Update progress tracking
