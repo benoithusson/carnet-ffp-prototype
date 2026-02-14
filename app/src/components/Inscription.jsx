@@ -36,7 +36,7 @@ const Inscription = () => {
               id="email"
               type="email"
               className="inscription-screen__input"
-              placeholder="Placeholder par défault"
+              placeholder="Exemple : benoit@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

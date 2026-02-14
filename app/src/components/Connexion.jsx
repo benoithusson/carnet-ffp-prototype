@@ -42,7 +42,7 @@ const Connexion = () => {
                 id="email"
                 type="email"
                 className="connexion-screen__input"
-                placeholder="Placeholder par défault"
+                placeholder="Exemple : benoit@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -59,7 +59,7 @@ const Connexion = () => {
                     id="password"
                     type={showPassword ? 'text' : 'password'}
                     className="connexion-screen__input connexion-screen__input--with-trailing"
-                    placeholder="Placeholder par défault"
+                    placeholder="Exemple : MotDePasse123!"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />

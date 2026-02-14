@@ -50,22 +50,23 @@ const BrevetsQualifications = () => {
       <header className="brevets-screen__header">
         <div className="brevets-screen__header-top">
           <button className="brevets-screen__back-button" aria-label="Retour">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="#191A1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.0001 25.3333L6.66675 16L16.0001 6.66666" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M25.3334 16H6.66675" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-          <p className="brevets-screen__step-text">Etape 4 sur 6</p>
+          <p className="brevets-screen__step-text">Etape 2 sur 6</p>
           <button className="brevets-screen__skip-button">Passer</button>
         </div>
 
         {/* Progress bar with 6 steps */}
         <div className="brevets-screen__progress">
           <div className="brevets-screen__progress-step brevets-screen__progress-step--done"></div>
-          <div className="brevets-screen__progress-step brevets-screen__progress-step--done"></div>
-          <div className="brevets-screen__progress-step brevets-screen__progress-step--done"></div>
           <div className="brevets-screen__progress-step brevets-screen__progress-step--current">
             <div className="brevets-screen__progress-step-inner"></div>
           </div>
+          <div className="brevets-screen__progress-step brevets-screen__progress-step--next"></div>
+          <div className="brevets-screen__progress-step brevets-screen__progress-step--next"></div>
           <div className="brevets-screen__progress-step brevets-screen__progress-step--next"></div>
           <div className="brevets-screen__progress-step brevets-screen__progress-step--next"></div>
         </div>

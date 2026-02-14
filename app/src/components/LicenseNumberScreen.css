@@ -84,7 +84,7 @@
 .license-screen__input-wrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-2xs);
   width: 100%;
 }
 

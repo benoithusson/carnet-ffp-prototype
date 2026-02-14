@@ -99,7 +99,7 @@ const TerminerInscription = () => {
               id="nom"
               type="text"
               className="terminer-inscription__input"
-              placeholder="Placeholder par défault"
+              placeholder="Exemple : Dupont"
               value={nom}
               onChange={(e) => setNom(e.target.value)}
             />
@@ -114,7 +114,7 @@ const TerminerInscription = () => {
               id="prenom"
               type="text"
               className="terminer-inscription__input"
-              placeholder="Placeholder par défault"
+              placeholder="Exemple : Jean"
               value={prenom}
               onChange={(e) => setPrenom(e.target.value)}
             />
@@ -129,7 +129,7 @@ const TerminerInscription = () => {
               id="date-naissance"
               type="text"
               className="terminer-inscription__input"
-              placeholder="Placeholder par défault"
+              placeholder="Exemple : 15/03/1990"
               value={dateNaissance}
               onChange={(e) => setDateNaissance(e.target.value)}
             />
@@ -145,7 +145,7 @@ const TerminerInscription = () => {
                 id="poids"
                 type="number"
                 className="terminer-inscription__input terminer-inscription__input--with-trailing"
-                placeholder="Placeholder par défault"
+                placeholder="Exemple : 75"
                 value={poids}
                 onChange={(e) => setPoids(e.target.value)}
               />
@@ -181,7 +181,7 @@ const TerminerInscription = () => {
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   className="terminer-inscription__input terminer-inscription__input--with-trailing"
-                  placeholder="Placeholder par défault"
+                  placeholder="Exemple : MotDePasse123!"
                   value={password}
                   onChange={handlePasswordChange}
                 />

@@ -26,12 +26,13 @@ const HasLicenseQuestionScreen = () => {
     <div className="has-license" data-node-id="2254:2981">
       {/* Header */}
       <header className="has-license__header" data-node-id="2721:64124">
-        <div className="has-license__back-button">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M8.75 10.5L5.25 7L8.75 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
         <div className="has-license__header-content">
+          <button className="has-license__back-button">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.0001 25.3333L6.66675 16L16.0001 6.66666" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M25.3334 16H6.66675" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
           <h1 className="has-license__title">
             Avez-vous un numéro de licence FFP ?
           </h1>

@@ -6,6 +6,7 @@ import HasLicenseQuestionScreen from './components/HasLicenseQuestionScreen';
 import LicenseNumberScreen from './components/LicenseNumberScreen';
 import TransferExperienceSummaryScreen from './components/TransferExperienceSummaryScreen';
 import BrevetsQualifications from './components/BrevetsQualifications';
+import VosVoiles from './components/VosVoiles';
 import './App.css';
 
 /**
@@ -31,6 +32,8 @@ function App() {
         return <TransferExperienceSummaryScreen />;
       case 'brevets-qualifications':
         return <BrevetsQualifications />;
+      case 'vos-voiles':
+        return <VosVoiles />;
       default:
         return (
           <div className="app__home">
@@ -82,7 +85,18 @@ function App() {
                     className="app__home-link"
                     onClick={() => setCurrentScreen('transfer-summary')}
                   >
-                    06 - Résumé transfert d'expérience
+                    06 - Résumé étapes transfert expérience
+                  </button>
+                </div>
+
+                <div className="app__home-divider"></div>
+
+                <div className="app__home-section">
+                  <button
+                    className="app__home-link"
+                    onClick={() => setCurrentScreen('vos-voiles')}
+                  >
+                    05b - Vos voiles
                   </button>
                   <button
                     className="app__home-link"

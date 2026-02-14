@@ -16,8 +16,9 @@ const LicenseNumberScreen = () => {
       <header className="license-screen__header" data-node-id="2658:10144">
         <div className="license-screen__header-content">
           <button className="license-screen__back-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="#191A1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.0001 25.3333L6.66675 16L16.0001 6.66666" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M25.3334 16H6.66675" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
           <h1 className="license-screen__title">
@@ -43,7 +44,7 @@ const LicenseNumberScreen = () => {
                 id="password"
                 type={showPassword ? 'text' : 'password'}
                 className="license-screen__input"
-                placeholder="Placeholder par défault"
+                placeholder="Exemple : MotDePasse123!"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
